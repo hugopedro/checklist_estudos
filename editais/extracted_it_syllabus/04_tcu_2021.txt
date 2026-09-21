@@ -1,0 +1,40 @@
+CONHECIMENTOS ESPECÍFICOS 
+ESTATÍSTICA: 1 Metodologia e utilização da estatística. Variáveis quantitativas e qualitativas. Séries estatísticas. 
+2 Organização e apresentação de variáveis. 3 Métodos para sumarização e análise exploratória de dados. 3.1 
+Distribuição de frequências: absoluta, relativa, acumulada. 3.2 Medidas de posição: média, moda, mediana e 
+quartis. 3.3 Medidas de dispersão: amplitude, variância, desvio -padrão, coeficiente de variação, amplitude 
+interquartil. 3.4 Correlação. 3.5 Histogramas e curvas de frequência. 3.6 Diagrama de c aixa ( boxplot) e 
+identificação de valores atípicos ( outliers). 3.7 Diagrama de dispersão. 4 Análise de dados categorizados. 5 
+Distribuições de probabilidade. Distribuição binomial. Distribuição normal. 6 Inferência estatística. Estimação 
+de parâmetros por ponto e por intervalo. Intervalo de confiança. Testes de hipóteses. Testes paramétricos: 
+médias e proporções. 7 Análise de regressão linear. 8 Técnicas de Amostragem. 9 Análise multivariada. 10 
+Séries Temporais: componentes estruturais das séries temporais e médias móveis. 
+ANÁLISE DE DADOS: 1 Dados estruturados e não estruturados. Dados abertos. Coleta, tratamento, 
+armazenamento, integração e recuperação de dados. Processos de ETL. Formatos e tecnologias: XML, JSON, 
+CSV. Representação de dados numéricos, te xtuais e estruturados; aritmética computacional. Representação 
+de dados espaciais para georeferenciamento e geosensoriamento. 2 Bancos de dados relacionais: teoria e 
+implementação. Uso do SQL como DDL, DML, DCL. Processamento de transações. 3 Exploração de  dados: 
+conceituação e características. Noções do modelo CRISP -DM. Técnicas para pré -processamento de dados. 
+Técnicas e tarefas de mineração de dados. Classificação. Regras de associação. Análise de agrupamentos 
+(clusterização). Detecção de anomalias. Mode lagem preditiva. 4 Conceitos de PLN: semântica vetorial, 
+redução de dimensionalidade, modelagem de tópicos latentes, classificação de textos, análise de sentimentos, 
+ 
+TRIBUNAL DE CONTAS DA UNIÃO  
+Instituto Serzedello Corrêa 
+ 
+ 
+ 
+TRIBUNAL DE CONTAS DA UNIÃO | CONCURSO PÚBLICO  28 
+ 
+representações com n-gramas. 5 Conceitos de ML: fontes de erro em modelos preditivos, validação e avaliação 
+de modelos preditivos, underfitting, overfitting e técnicas de regularização, otimização de hiperparâmetros, 
+separabilidade de dados, redução da dimensionalidade. Modelos lineares, árvores de decisão, redes neurais 
+feed-forward, classificador Naive Bayes. 6 Linguagem Python: sintaxe, variáveis, tipos de dados e estruturas de 
+controle de fluxo. Estruturas de dados, funções e arquivos. Bibliotecas: NLTK, Tensor Flow, Pandas, Numpy, 
+Arrow, Sklearn, Scipy. 7 Noções da Linguagem R. Sintaxe, tipos de dados, operadores, comandos de repetição, 
+estruturas de dados, gráficos, Data frames. Tidyverse. 8 Pareamento de dados ( record linkage). Processo e 
+etapas. Classificação. Qualidade de dados pareados. Análise de dados pareados. 9 Segurança da informaç ão: 
+Confidencialidade, integridade, disponibilidade, autenticidade e não repúdio. Políticas de segurança. Políticas 
+de classificação da informação. Sistemas de gestão de segurança da informação. Tratamento de incidentes de 
+segurança da informação. 10 Lei d e Acesso à Informação (Lei nº 12.527/2011): conceitos e aplicação. Lei 
+13.709/2018, Lei Geral de Proteção de Dados Pessoais (LGPD).

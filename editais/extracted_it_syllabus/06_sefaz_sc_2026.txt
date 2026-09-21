@@ -1,0 +1,85 @@
+CONHECIMENTOS ESPECÍFICOS para o Cargo de Auditor Estadual de Finanças Públicas - CIÊNCIAS DA COMPUTAÇÃO 
+Finanças Públicas: Lei nº 4.320/1964. Lei de Responsabilidade Fiscal. Planejamento e orçamento público: PPA, LDO e LOA; 
+princípios orçamentários; receita e despesa orçamentária; classificações; estágios; créditos adicionais; restos a pagar; 
+despesas de exercícios anteriores; fontes ou destinações de recursos. 
+Governança, Gestão de TI e Projetos: Governança e gestão de TI. Alinhamento estratégico, serviços, processos, riscos, 
+controles, indicadores e níveis de serviço. COBIT 2019 e ITIL v5. Planejamento, contratação, gestão e fiscalização de bens e 
+serviços de TI. Governança de contratos de TI. Gestão de fornecedores. Definição, acompanhamento e avaliação de 
+indicadores contratuais, níveis mínimos de serviço, acordos de nível de serviço (SLA), critérios de aceite, entregáveis, 
+qualidade, produtividade e desempenho. Gestão de riscos contratuais, aplicação de controles, monitoramento da 
+execução, avaliação de conformidade e aferição de resultados. Gerenciamento de projetos conforme PMBOK Guide, 8? 
+edição. Métodos ágeis. Scrum Guide 2020 e Kanban. Abordagens preditivas, adaptativas e híbridas. Engenharia e 
+Arquitetura de Software: Ciclo de vida e processos de desenvolvimento. Engenharia de requisitos. Requisitos funcionais e 
+não funcionais. Arquitetura de software, sistemas distribuídos, microsserviços e integração de aplicações. Qualidade e 
+testes de software. Métricas de software. Medição de tamanho funcional e não funcional. Análise de Pontos de Função 
+(APF), conceitos, componentes, contagem, estimativas e aplicações. Pontos de Caso de Uso e outras métricas de tamanho 
+de software. Métricas de produtividade, esforço, prazo, custo, qualidade, manutenibilidade e complexidade. Estimativas 
+de desenvolvimento e manutenção de software. Utilização de métricas para contratação, medição, aceite, faturamento, 
+acompanhamento e fiscalização de serviços de desenvolvimento, manutenção e sustentação de sistemas. Git 2.x. CI/CD, 
+DevOps e DevSecOps. APIs REST, HTTP/HTTPS, JSON, XML, autenticação, autorização, mensageria e interoperabilidade. 
+Desenvolvimento e manutenção de aplicações web. Linguagem Ck. Plataforma .NET e ASP.NET. HTMLS, CSS3, JavaScript e 
+TypeScript. Conceitos de programação orientada a objetos, arquitetura em camadas, aplicações cliente-servidor e 
+aplicações web. Leitura, compreensão e análise de código-fonte nessas tecnologias. Integração e Sistemas da 
+Administração Pública: Integração tecnológica com sistemas estruturantes de planejamento, orçamento, finanças, 
+contabilidade, compras, licitações, contratos e patrimônio. APIs, serviços web, barramentos de integração, mensageria, 
+interoperabilidade, segurança, qualidade, consistência e rastreabilidade das informações. Análise de integrações entre 
+sistemas corporativos e sistemas estruturantes da Administração Pública, incluindo avaliação de interfaces, fluxos de dados, 
+regras de negócio, controles, segurança, disponibilidade, integridade e rastreabilidade. Bancos de Dados e SQL: 
+Modelagem conceitual, lógica e física. MER. Modelo relacional. Entidades, relacionamentos, chaves, integridade, 
+normalização, transações, concorrência, índices, particionamento, visões, segurança, backup e recuperação. Bancos 
+relacionais e não relacionais (NoSQL). PostgreSQL 18, MySQL 8.4 LTS, Microsoft SQL Server 2025 e MongoDB 8.0, ou versões 
+mais recentes. SQL: DDL, DML, DCL e TCL; consultas, filtros, agrupamentos, junções, subconsultas, CTE, operações de 
+conjuntos, funções de janela, visões, transações, índices, planos de execução e otimização de desempenho. Data 
+Warehouse e Engenharia de Dados: Data Warehouse, Data Mart, Data Lake e Lakehouse. OLTP e OLAP. Modelagem 
+dimensional, tabelas fato e dimensão, esquemas estrela e floco de neve. ETL e ELT. Coleta, ingestão, limpeza, 
+  
+28
+  
+SANTA FEFundação CATARINA Carlos Chagas SECRETARIA DA FAZENDA 
+transformação, integração e armazenamento. Pipelines batch e streaming. Processamento distribuído, Big Data e 
+arquiteturas escaláveis. Apache Spark 4.x e conceitos de DataFrame e Spark SQL. Governança e Qualidade de Dados: 
+Governança, papéis e responsabilidades, catálogo, glossário, metadados, dicionário e linhagem de dados. Gestão do ciclo 
+de vida, dados mestres e de referência. Qualidade de dados: completude, consistência, validade, precisão, unicidade, 
+integridade e atualidade. Data profiling, limpeza, tratamento de inconsistências, duplicidades, valores ausentes e outliers. 
+Business Intelligence, Analytics e Visualização: Arquitetura de BI, indicadores, métricas, relatórios, dashboards, análise 
+descritiva, diagnóstica, preditiva e prescritiva. Self-service BI. Visualização e comunicação de dados. Microsoft Power BI, 
+versão vigente: Power Query, linguagem M, modelagem de dados, DAX, medidas, relacionamentos, filtros e dashboards. 
+Programação e Automação para Dados: Lógica de programação, algoritmos, estruturas de dados, funções, arquivos e 
+tratamento de exceções. Python 3.14.x. NumPy 2.5.x e pandas 3.0.x. Manipulação, transformação, integração e análise de 
+dados. CSV, JSON e XML. Consumo de APIs e web scraping. Automação de rotinas de coleta, tratamento, cruzamento, 
+análise e geração de relatórios. Conceitos de RPA. Estatística, Ciência de Dados e Machine Learning: Estatística descritiva 
+e inferencial. Medidas de posição e dispersão, probabilidade, distribuições, amostragem, correlação, regressão, intervalos 
+de confiança e testes de hipóteses. Análise exploratória de dados. Ciclo de vida de projetos de Ciência de Dados. Preparação, 
+engenharia e seleção de atributos. Aprendizado supervisionado e não supervisionado. Classificação, regressão e clustering. 
+Árvores de decisão, métodos ensemble e algoritmos baseados em distância. Treinamento, validação, overfitting, 
+underfitting e métricas de avaliação. scikit-learn 1.9.x. Detecção de Anomalias e Padrões Suspeitos: Técnicas estatísticas, 
+regras e aprendizado de máquina para identificação de anomalias, outliers e padrões suspeitos. Análise de grandes volumes 
+de transações financeiras, orçamentárias, contábeis, compras, contratos e licitações. Identificação de inconsistências, 
+duplicidades, fracionamentos, concentrações e relacionamentos atípicos. Falsos positivos, falsos negativos, indicadores de 
+risco e priorização de casos para análise. Inteligência Artificial, PLN e IA Generativa: Conceitos de Inteligência Artificial e 
+Deep Learning. Redes neurais. Processamento de Linguagem Natural — PLN: classificação, extração de informações, 
+entidades, similaridade, busca semântica e sumarização. LLMSs, transformers, tokens, embeddings, contexto, engenharia 
+de prompts, RAG, bancos vetoriais, agentes de IA e modelos multimodais (conceitos). Frameworks como PyTorch e 
+TensorFlow, em versões estáveis suportadas. Alucinações, vieses, segurança, privacidade, explicabilidade, supervisão 
+humana e uso responsável de IA. Infraestrutura, Redes e Computação em Nuvem: Servidores, sistemas operacionais, 
+virtualização, armazenamento, contêineres, alta disponibilidade e balanceamento de carga. Modelos OSI e TCP/IP, IPv4 e 
+IPv6, TCP, UDP, DNS, DHCP, HTTP/HTTPS, LAN, WAN, WLAN, VLAN, NAT, VPN, roteamento e switching. Computação em 
+nuvem: laaS, PaaS, SaaS, nuvens pública, privada e híbrida, elasticidade, escalabilidade, serviços gerenciados, 
+armazenamento, bancos de dados, serverless, monitoramento, backup e responsabilidade compartilhada. AWS, Microsoft 
+Azure e Google Cloud Platform (GCP), em serviços vigentes. Docker e Kubernetes, em versões estáveis suportadas. 
+Segurança da Informação e Proteção de Dados: Confidencialidade, integridade, disponibilidade, autenticidade e não 
+repúdio. Ameaças, vulnerabilidades, riscos e controles. Gestão de identidades e acessos (IAM), MFA e RBAC. Segurança de 
+redes, sistemas, bancos de dados, APIs, aplicações, endpoints, pipelines de dados e ambientes em nuvem. Firewalls, IDS/IPS 
+e WAF. Hardening, gestão de vulnerabilidades e patches. Logs, monitoramento, incidentes, backup e continuidade. 
+Criptografia simétrica e assimétrica, hashes, certificados, assinaturas digitais, PKI, TLS, gestão de chaves e segredos. LGPD 
+aplicada a sistemas, analytics e IA; Privacy by Design, minimização, anonimização, pseudonimização, mascaramento e 
+proteção de dados em repouso e em trânsito. Auditoria e Controle com Uso de Tecnologia: Aplicação de bancos de dados, 
+SQL, BI, Ciência de Dados, automação e Inteligência Artificial às atividades de auditoria, fiscalização e controle. Extração, 
+integração, cruzamento e análise de bases. Automatização de testes. Identificação de inconsistências, exceções, anomalias 
+e padrões suspeitos. Indicadores de risco, relatórios e dashboards. Análise de transações financeiras, orçamento, receitas, 
+despesas, compras, contratos e licitações. Rastreabilidade, integridade, reprodutibilidade e documentação das análises. 
+Auditoria de contratos de Tl e de serviços de desenvolvimento, manutenção, sustentação, infraestrutura e suporte. 
+Avaliação de conformidade da execução contratual, níveis de serviço, indicadores, métricas de software, produtividade, 
+qualidade das entregas, critérios de aceite, medições, faturamento e desempenho de fornecedores. Auditoria de sistemas 
+e aplicações, incluindo análise de requisitos, arquitetura, código-fonte, integrações, controles, trilhas de auditoria e 
+aderência às especificações contratuais. Inglês Técnico.

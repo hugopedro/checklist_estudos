@@ -1,0 +1,101 @@
+2 Banco de dados relacionais. 2.1 Conceitos básicos e características. Metadados. Tabelas, visões (views) e 
+índices. Chaves e relacionamentos. 3 Noções de modelagem dimensional. 3.1 Conceito e aplicações. 4 Noções 
+de mineração de dados. 4.1 Conceituação e características. Modelo de referência CRISP -DM. Técnicas para 
+pré-processamento de dados. Técnicas e tarefas de mineração de dados. Classificação. Regras de associação. 
+Análise de agrupamentos (clusterização). Detecção de anomalias. Modelagem preditiva. Aprendizado de 
+máquina. Mineração de texto. 5 Noções de big data. 5.1 Conceito, premissas e aplicação. 6 Visualização e 
+análise exploratória de dados. 7 Segurança da informação: confidencialidade, integridade, disponibilidade, 
+autenticidade e não repúdio. Políticas de segurança. Políticas de classificação da informação. Sistemas de 
+gestão de segurança da informação. Tratamento de incidentes de segurança da informação. 8 Lei Federal nº 
+12.527/2011 (Lei de Acesso à Informação). 9 Lei Federal nº 13.709/2018 (Lei Geral de Proteção de Dados 
+Pessoais). 
+ 
+CARGO 3 : AUDITOR DE CONTROLE EXTERNO – ÁREA ESPECIALIZADA – ESPECIALIDADE TECNOLOGIA DA 
+INFORMAÇÃO – ORIENTAÇÃO DE SISTEMAS TI 
+CONHECIMENTOS ESPECIALIZADOS 
+ENGENHARIA DE SOFTWARE: 1 Gerenciamento de processos de negócio: modelagem de processos; técnicas 
+de análise de processo; desenho e melhoria de processos; integração de processos; Business Process 
+Modeling and Notation (BPMN). 2 Engenharia de requisitos: conceitos básicos; técnicas de elicitação de 
+requisitos; gerenciamento de requisitos; especificação de requisitos; histórias de usuário; técnicas de 
+validação de requisitos; prototipação; produto mínimo viável. 3 Engenharia de usabilidade: conceitos básicos 
+e aplicações; critérios, recomendações e guias de estilo; análise de requisitos de usabilidade e responsividade; 
+métodos para avaliação de usabilidade; design de interface e de ex periência do usuário. 4 Metodologias e 
+práticas de desenvolvimento ágeis: Scrum, Extreme Programming (XP), Kanban, Lean development e TDD. 
+Qualidade de software. 5 Análise e projeto orientados a objetos: Conceitos fundamentais, análise, 
+modelagem e padrões de projeto; Análise e projeto orientados a objetos; Polimorfismo, Herança, Abstração 
+e Encapsulamento. 6 Gestão de projetos e produtos de software: gestão de backlog, gestão de dívida técnica, 
+técnicas de priorização, técnicas de estimativas (story points, análise de pontos de função). 7 Testes: conceitos 
+básicos e aplicações; tipos de testes; análise estática de código fonte (SonarQube); testes automatizados e 
+manuais. 
+DESENVOLVIMENTO DE SISTEMAS: 1 Arquitetura de aplicações para ambientes web: Arquitetur a em 
+camadas, Baseada em serviços, Microserviços, Orientação a eventos, Hexagonal, Serverless, Anti -padrões 
+arquiteturais. 2 Tecnologias e práticas frontend web: HTML5, CSS3, JavaScript, Ajax, frameworks (Bootstrap, 
+VueJS, jQuery), WebSocket e Single Page Application (SPA). 3 Desenvolvimento web em PHP: Frameworks 
+Symfony e Doctrine. 4 Desenvolvimento web em Java: Java EE, framework spring e Hibernate. 5 
+Desenvolvimento para plataforma mobile Android e IOS: Flutter. 6 Desenvolvimento com containers: Docker, 
+OCI, Kubernetes, Boas práticas para desenvolvimento com containers, Orquestração de containers, 
+Arquitetura altamente distribuída, Content Delivery Networks (CDNs). 7 Interoperabilidade de sistemas: 
+Padrões de integração de aplicações: Rest, GraphQL, SOAP; Web services, comunicação síncrona e assíncrona 
+44  
+(webhooks), mensageria: Apache Kafka e RabbitMQ; orientação a eventos e formato de troca de dados: JSON, 
+XML, gRPC. 8 DevOps e DevSecOps: Conceitos e princípios, Integração contínua, Entrega contínua, 
+Deployment Pipelines, Feature flags, Deploy A/B, Deploy canário, Observabilidade, Coleta e análise de logs e 
+métricas, Automação, Linguagens de scripting, operação em ambiente Linux. 9 Gerência de configuração de 
+software: versionamento (Git e GitLab), merge, b ranch, pipeline; Gitflow, desenvolvimento colaborativo; 
+CI/CD (GitLab CI). 10 Segurança no desenvolvimento: práticas de programação segura e revisão de código; 
+controles e testes de segurança para aplicações web; controles e testes de segurança para Web Services. 
+BANCOS DE DADOS: 1 Bancos de dados relacionais: Sistemas gerenciadores de banco de dados: MS SQL 
+Server e MariaDB; Conceitos básicos; Noções de Administração; SQL (Structured Query Language); Controle 
+de proteção, integridade, concorrência e bloque io de transações. 2 Banco de dados NoSQL: Key/Value; 
+Orientados a Documentos; Grafos. 3 Técnicas para detecção de problemas e otimização de desempenho do 
+SGBD e de consultas SQL. 4 Arquitetura e aplicações de data warehousing, ETL e Olap; Técnicas de modelagem 
+e otimização de bases de dados multidimensionais. 5 Business Intelligence: Processo de coleta, organização, 
+análise e compartilhamento de informações; Dashboards: painéis e visualização de dados. 6 Ferramentas de 
+busca, indexação e análise de dados: Elasticsearch, Logstash e Kibana. 7 Conceitos sobre Big Data e Data Lake. 
+8 Governança de dados por meio da metodologia do DAMA-DMBoK (Data Management Body of Knowledge). 
+ANÁLISE DE DADOS: 1 Dados estruturados e não estruturados. Dados abertos. Coleta, trat amento, 
+armazenamento, integração e recuperação de dados. Processos de ETL. Formatos e tecnologias: XML, JSON, 
+CSV. Representação de dados numéricos, textuais e estruturados; aritmética computacional. 2 Exploração de 
+dados: conceituação e características. Noções do modelo CRISP -DM. Técnicas para pré -processamento de 
+dados. Técnicas e tarefas de mineração de dados. Classificação. Regras de associação. Análise de 
+agrupamentos(clusterização). Detecção de anomalias. Modelagem preditiva. 3 Conceitos de Processamento 
+de Linguagem Natural (PLN): semântica vetorial, redução de dimensionalidade, modelagem de tópicos 
+latentes, classificação de textos, análise de sentimentos, representações com n -gramas. 4 Conceitos de 
+Machine Learning: fontes de erro em modelos predit ivos, validação e avaliação de modelos preditivos, 
+underfitting, overfitting e técnicas de regularização, otimização de hiperparâmetros, separabilidade de dados, 
+redução da dimensionalidade. Modelos lineares, árvores de decisão, redes neurais feed-forward, classificador 
+Naive Bayes. 5 Linguagem Python: sintaxe, variáveis, tipos de dados e estruturas de controle de fluxo. 
+Estruturas de dados, funções e arquivos. Bibliotecas: NLTK, Tensor Flow, Pandas, Numpy, Sklearn, Scipy.  
+SEGURANÇA DA INFORMAÇÃO: 1 Gestão de segurança da informação: NBR ISO/IEC 27001 e NBR ISO/IEC 
+27002. 2 Métodos de autenticação: Autenticação de dois fatores (2FA), baseada em biometria, por token e 
+certificados; Protocolos de autenticação: OAuth 2.0, OpenID Connect e JWT (JSON Web Tokens) . 3 Ameaças 
+e vulnerabilidades em aplicações: Injection (SQL, LDAP), Cross-Site Scripting (XSS), Quebra de autenticação e 
+gerenciamento de sessão, Referência insegura a objetos, Cross -Site Request Forgery, Armazenamento 
+inseguro de dados criptografados. 4 Segurança de aplicativos web: Conceitos de segurança de aplicativos web, 
+Análise de vulnerabilidades em aplicações web, Metodologia Open Web Application Security Project 
+(OWASP), Técnicas de proteção de aplicações web. 5 Prevenção e combate a ataques a red es de 
+computadores, como DDoS, DoS, DNS spoofing, eavesdropping, phishing, brute force, port scanning. 6 
+Criptografia e proteção de dados em trânsito e em repouso; Sistemas criptográficos simétricos e assimétricos 
+e principais protocolos. 7 Assinatura e ce rtificação digital. 8 Gestão de riscos e continuidade de negócio: 
+Norma NBR ISO/IEC 27005. 9 Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais) e alterações. 
+(Retificado por meio do Edital nº 2 – TCDF/Serviços Auxiliares, de 23 de agosto de 2023,  disponível no endereço eletrônico 
+http://www.cebraspe.org.br/concursos/tc_df_23) 
+GESTÃO E GOVERNANÇA DE TI: 1 Planejamento e Gestão Estratégicos de TI: PETI, PDTI e Indicadores de 
+desempenho de TI. 2 Gerenciamento de projetos (PMBOK 7ª edição). 3 Gerenciamento de serviços (ITIL V4): 
+45  
+conceitos básicos, estrutura e objetivos. 4 Governança de TI (COBIT 2019): conce itos básicos, estrutura e 
+objetivos. 5 Qualidade de software: CMMI, MPS/BR. 6 Norma NBR ISO/IEC nº 38500:2015. 7 Lei nº 
+12.527/2011 (Lei de Acesso à Informação). 
+(Retificado por meio do Edital nº 2 – TCDF/Serviços Auxiliares, de 23 de agosto de 2023, dispo nível no endereço eletrônico 
+http://www.cebraspe.org.br/concursos/tc_df_23) 
+FISCALIZAÇÃO DE CONTRATOS DE TI: 1 Gestão de contratação de soluções de TI. 2 Legislação aplicável à 
+contratação de be ns e serviços de TI e suas alterações: 2.1 Lei nº 14.133/2021 (Nova Lei de Licitações e 
+Contratos); 2.2 Instrução Normativa SGD /SEDGG/ME nº 94/2022 ; 2.3 Instrução Normativa SEGES/ME 
+65/2021. 3 Elaboração e fiscalização de contratos de Tecnologia da Informação: Critérios de remuneração por 
+esforço versus produto; Cláusulas e indicadores de nível de serviço; Papel do fiscalizador do contrato; Papel 
+do preposto da contratada; Acompanhamento da execução contratual; Registro e notificação de 
+irregularidades; Definição e aplicação de penalidades e sanções administrativas; Contratações de serviços de 
+TI baseadas em Unidade de Serviço Técnico – UST, em Pontos de Função – PF, e em postos de trabalho com 
+níveis de serviço. 
+(Retificado por meio do Edital nº 2 – TCDF/Serviços Auxiliares, de 23 de agosto de 2023, disponível no endereço eletrônico 
+http://www.cebraspe.org.br/concursos/tc_df_23)

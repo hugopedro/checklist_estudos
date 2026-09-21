@@ -1,0 +1,30 @@
+# Python bytecode e caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Ambientes virtuais
+.venv/
+venv/
+ENV/
+env/
+
+# Arquivos de sistema operacional e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Diretórios temporários de scratch
+scratch/
+*.tmp
+
+# Arquivos e notas pessoais fora do escopo de estudos
+ChatGPT-Eliminar DPs Sem Pagar*
+precedentes_tj_uniritter*
+papel_de_parede_seguranca_do_trabalho*

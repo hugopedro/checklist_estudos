@@ -1,0 +1,253 @@
+• CONHECIMENTOS ESPECÍFICOS: ANALISTA – Ciência de Dados – (Perfil 7) 
+ 
+1 - CIÊNCIA DE DADOS  
+Aprendizado de máquina e suas técnicas. T écnicas de classifica ção. T écnicas de regress ão. T écnicas de agrupamento. 
+Técnicas de redução de dimensionalidade. Técnicas de associação e recomendação. Noções de visão computacional. Deep 
+learning e suas principais arquitetur as. Aprendizado por reforço. Aprendizado Semissupervisionado. Descoberta do 
+Conhecimento / Knowledge Discovery in Database (KDD). Aprendizado de máquina aplicado a séries temporais. Conceitos 
+de aprendizado de máquina. Fontes de erro em modelos preditivos.  Avaliação de modelos preditivos. Underfitting, 
+overfitting e técnicas de regularização. Otimização de hiperparâmetros. Validação cruzada. Métodos de seleção de 
+atributos. Comitês (Ensemble). Separabilidade de dados. Tratamento de dados. Normaliza ção numérica. Discretiza ção. 
+Tratamento de dados ausentes. Tratamento de outliers e agrega ções. Tratamento de dados desbalanceados. 
+Superamostragem. Subamostragem. Desidentificação de dados sensíveis. Organização e identificação de variáveis 
+qualitativas e quantitativas, nominais e ordinais, discretas e contínuas. Inferência bayesiana aplicada ao aprendizado de 
+máquina. Seleção bayesiana de modelos. Média bayesiana de modelos. Redes neurais bayesianas. Modelos hierárquicos 
+31 
+  
+ 
+ 
+bayesianos. Inferência sequencial bayesiana. Ingestão de dados. Conceito. Ingest ão de dados estruturados, 
+semiestruturados e não estruturados. Ingest ão de dados em lote (batch). Ingest ão de dados em streaming. Ingest ão de 
+dados full × incremental. Ing estão de dados CDC (change data capture). Processamento de dados. Conceitos de 
+processamento massivo e paralelo. Processamento em lote (batch). Processamento em tempo real (real time). 
+Processamento MapReduce. Processamento de linguagem natural (PLN). Modelos grandes de linguagem (Large Language 
+Models). Conceito e arquitetura. Aplicações em PLN. Geração de dados sintéticos. Fine tuning. Qualidade de dados. 
+Conceitos e defini ções. Dimensões da qualidade de dados (vis ão DMBOK). Principais t écnicas em q ualidade de dados. 
+Profiling. Matching. Deduplica ção. Data cleansing. Enriquecimento. Boas pr áticas para ado ção da qualidade de dados. 
+Processos de qualidade para modelos de dados. Noções de governança de dados (visão DMBOK). Conceitos modernos de 
+sistemas de informação. Serviços de Computação em Nuvem. Conceitos de Containers: construção, registro, execução e 
+orquestração. Repositórios de código e versionamento. Github. SVN. Big Data. Fundamentos. Tipos de dados: 
+estruturados, semiestruturados e não estruturados. Fluxo de Big Data: ingest ão, processamento e disponibiliza ção. 
+Armazenamento de Big Data. Pipeline de dados. Processamento distribu ído e MapReduce. Conceito de data lake. ETL X 
+ELT. Soluções de Big Data. Arquiteturas de Big Data. Aprendizado de máquina distribuído, federado e em múltiplas GPUs. 
+Ética e privacidade em ciência de dados. Princípios éticos na análise de dados. Legislações e regulamentações relacionadas 
+à proteção, privacidade e segurança de dados. Noções da Lei nº 13.709/2018 – Lei Geral de Proteção de Dados (LGPD). 
+Regtech: conceito e aplicações no mercado de capitais. Suptech: conceito e aplicações no mercado de capitais. Plataforma 
+Microsoft Power BI. Apresentação de dados, elaboração e interpretação de gráficos, tabelas e m apas. Diagrama boxplot. 
+Detecção de outliers. 
+ 
+2 - LINGUAGENS E BANCO DE DADOS 
+Linguagem de programação Python. Sintaxe básica, operadores, variáveis. Estruturas de dados: dataframes, listas, 
+matrizes, dicionários, conjuntos. Estruturas de controle de fluxo. Funções e escopo. Manipulação, limpeza, transformação 
+e pré-processamento de dados com Pandas. Operações com arrays com NumPy. Visualização de dados com Matplotlib e 
+Seaborn. Redes neurais com TensorFlow, Keras e PyTorch. Aprendizado de máquina com Scikit -learn e XGBoost. 
+Aplicações de processamento de linguagem natural com NLTK, gensim e spaCy. Big data com Dask e PySpark. Programação 
+orientada a objetos em Python. Jupyter Notebook. Linguagem SQL ANSI. Consultas, procedures, packages, funções, 
+triggers e views. SQL/PL-SQL, DDL, DML, DQL, DTL e DCL. Noções de Javascript e HTML. Noç ões de Scala e Java. Banco de 
+dados. Modelo de entidades e relacionamentos. Modelo relacional: teoria e normalização. Sistemas de Suporte à Decisão: 
+inteligência de negócios. Processo de Data Warehousing, Data Warehouses, Tipos de Data Marts, Técnicas Bási cas e 
+Avançadas de Modelagem Multidimensional de Dados. Recuperação e visualização de dados - OLAP, Painéis e dashboards. 
+Data Mining. Padrões JSON e XML.  Integração de dados - Extração, transformação e carga (ETL). Data Lakes. Padrões: 
+XML e XSLT. Linguagem de programação: JSON. Técnicas de implementação de SGBD. Transações: conceito, propriedades 
+e implementação. Processamento e otimização de consultas. Recuperação e concorrência. Segurança em bancos de 
+dados. Distribuição de dados e transações. Interfac es de utilização: principais propriedades e características das 
+bibliotecas mais difundidas. Algoritmos de busca e indexação: sequenciais, árvores, hashing, bitmaps. Administração de 
+bancos de dados. MS SQL Server, MySQL, PostgreSQL: Instalação, operação, tunning, manutenção, gerenciamento, 
+backup. Criação e manutenção de views, funções, stored procedures, triggers, segurança. Conexões. Interfaces de 
+utilização: principais propriedades e características das bibliotecas mais difundidas. ODBC. Camadas de pers istência. 
+ 
+3 - MATEMÁTICA E ESTATÍSTICA 
+Álgebra Linear para ciência de dados. Notação de vetores e matrizes. Operações com vetores e matrizes. Matriz 
+identidade, inversa e transposta. Transformações lineares. Produto interno e norma. Normas L1 e L2. Autovalores e 
+autovetores. Decomposição matric ial: Cholesky, diagonalização, Singular Value Decomposition (SVD). Métodos para 
+sumarização e análise exploratória de dados. Distribuição de frequências: absoluta, relativa, acumulada. Medidas de 
+posição: média, moda, mediana e quartis. Medidas de dispersã o: amplitude, variância, desvio -padrão, coeficiente de 
+variação, amplitude interquartil. Medidas de Associação: Covariância e Correlação. Histogramas e curvas de frequência. 
+Diagrama de caixa (boxplot) e identificação de valores atípicos (outliers). Diagrama de dispersão. Variáveis quantitativas e 
+qualitativas. Probabilidade. Definições básicas e axiomas. Probabilidade condicional e independência. Variáveis aleatórias 
+e funções de probabilidade. Independência de eventos, Teorema de Bayes e Teorema da Probab ilidade Total. 
+Distribuições de probabilidade contínuas e discretas. Inferência estatística. Estimação de parâmetros por ponto (método 
+dos momentos, mínimos quadrados e máxima verossimilhança) e por intervalo.  Intervalo de confiança. Testes de 
+hipóteses. Testes paramétricos. Análise de regressão linear simples e múltipla. Modelo Clássico de Regressão Linear 
+Normal: estimação, propriedades dos estimadores, testes de detecção de violações das hipóteses clássicas, violações das 
+hipóteses clássicas: consequênc ias e ajustes. Regressão Logística. Regressões Lasso, Ridge e Elasticnet. Análise 
+multivariada. Técnicas de dependência e interdependência. Análise de dados categorizados: tabelas de Contingência e 
+testes Qui-Quadrado.  Séries Temporais. Componentes estrut urais. Médias móveis. Modelos ARIMA. Predição. Testes de 
+raiz unitária e cointegração. Inferência Bayesiana: distribuições a priori e a posteriori, intervalo de credibilidade Bayesiano, 
+fator de Bayes, Markov Chain Monte Carlo (MCMC). 
+32 
+  
+ 
+ 
+ 
+4 - GESTÃO DE PROJETOS  
+Gestão de Projetos: Gerenciamento de Projetos: Definições, conceitos básicos e ciclo de vida do projeto; Etapas de 
+Planejamento e Gerenciamento de Projetos; Grupos de Processo e Áreas de Conhecimento; PMI (Project Management 
+Institute) e PMBoK (Project Man agement Base of Knowledge)  versão 7; Habilidades e Competências do profissional de 
+Gestão de Projetos (Project Management Professional – PMP). Ferramentas e Técnicas para Gerenciamento de Projetos; 
+Administração do tempo e reuniões; Técnicas de tomada de d ecisão e acompanhamento de projetos; MS Project; 
+Indicadores de desempenho em projetos; Gerenciamento de Projetos em Gestão da Informação; Gerenciamento por 
+processos; Big Data e Qualidade da Informação. 
+  
+ 
+• CONHECIMENTOS ESPECÍFICOS: ANALISTA – TI / Sistemas e Desenvolvimento (Perfil 8)  
+ 
+1 - ENGENHARIA DE SOFTWARE E DESENVOLVIMENTO DE SISTEMAS 
+Engenharia de Software - Metodologias ágeis aplicadas a projetos de desenvolvimento de software (SCRUM, XP, 
+KANBAN). Engenharia de Requisitos: Elicitação, Especificação e Gerenciamento de requisitos. Prototipação. Usabilidade. 
+Linguagem de modelagem UML 2.5.1. Desenvolvimento de Software: Implementação e manutenção de soft ware; 
+Gerência de Configuração; Qualidade de Software: métricas de Software. Testes de Software: Estratégias de testes. 
+Técnicas de testes, Verificação e Validação. Gestão de defeitos (Bug tracking). Rastreabilidade dos cenários de teste. 
+Métodos de automatização de testes. Testes em processos ágeis. Estimativa de Esforço: Análise de pontos de função 
+(APF) - conceitos básicos e aplicações. Contagem em projetos de desenvolvimento e de manutenção: IFPUG e NESMA e 
+uso de deflatores.  Medição não funcional de software: SNAP (Software non-Functional Assessment Process). Qualidade 
+de software: CMMI 2.0, MPS.BR - Referência Guia Geral MPS Software 2023. Indicadores/métricas de qualidade dos 
+produtos de software. 
+Conceitos. Padrões de projeto (Design Patterns). Arquitetura Hexagonal. Arquitetura multicamadas. Arquitetura 
+Orientada a Serviços. Microsserviços. Padrão arquitetural SOAP e REST. Domain Driven Design (DDD). Clean Architecture. 
+Serverless. Arquitetura de sistemas baseada em nuvem. Desenvolvimento orientado a testes (TDD).  
+Linguagens de Programação - Fundamentos: lógica de programação; Operadores e expressões, Estruturas de controle, 
+seleção, repetição e desvio. Complexidade de algoritmos. Estruturas de dados; métodos de ordenação, pesquisa e 
+hashing, estrutura de arquivos; paradigmas de programação; programação estruturada; programação orientada a 
+objetos, programação funcional. Linguagens e plataformas de desenvolvimento de software: Java, PHP, Javascript, SQL. 
+HTML e CSS. XML. JSON. Python. 
+ 
+2 - ARQUITETURA DE COMPUTADORES, SISTEMAS OPERACIONAIS E REDES  
+Arquitetura de computadores e sistemas operacionais - Noções de arquitetura de computadores: organização e 
+funcionamento dos componentes principais - processadores, sistemas de memória, sistemas de armazenamento e 
+periféricos de entrada e saída; execução d e instruções; paralelismo e multiprocessamento. Componentes da UCP; 
+Conceito de interrupção (IRQ). 
+Sistemas operacionais: Conceituação, Gerenciamento de processadores – Conceito e estados de processo; Comunicação 
+entre processos; Threads; Escalonamento; Primitivas de sincronização; Deadlocks; Starvation. Gerenciamento de 
+memória: Áreas de memória de um processo; Algoritmos de alocação de memória; Fragmentação; Paginação; 
+Segmentação; Memória Virtual; Substituição de páginas, gerenciamento de entrada/saída (I/O), gerenciamento de 
+processos, sistemas de arquivos. 
+Redes de computadores: Arquitetura OSI da ISO; Arquitetura TCP/IP; SSL (Secure Sockets Layer): HTTPS, FTPS e SFTP. 
+Redes P2P, WAN, LAN, WLAN. 
+ 
+3 – Projetos e GOVERNANÇA DE TI 
+Planejamento de TIC (Tecnologia da Informação e Comunicações): Plano Diretor de TIC, Governança Digital, Governança 
+e Gestão de TIC. Gerenciamento de Projetos e Produtos: abordagens de desenvolvimento e ciclo de vida. Abordagem 
+PMBOK versão 7 /PMI. Gerenciamento de Serviços de TI: Fundamentos em Gerenciamento de Serviços segundo ITIL® 
+versão 4. Gestão de Riscos de TIC. Noções da Lei nº 13.709/2018 – Lei Geral de Proteção de Dados (LGPD). 
+ 
+• CONHECIMENTOS ESPECÍFICOS: ANALISTA – TI / Infraestrutura e Segurança (Perfil 9)  
+ 
+1 - SEGURANÇA DA INFORMAÇÃO 
+Conceituação de mecanismos de segurança em sistemas operacionais: boas práticas de hardening, ferramentas de 
+segurança (firewall, IDS, IPS, EDR/XDR). 
+Conceitos de segurança da informação: DICA - Disponibilidade, Integridade, Confidencialidade, Autenticidade; Sistemas 
+de Gestão de Segurança da Informação previstos na ISO/IEC 27001:2013; Controles de segurança previstos nas ISO/IEC 
+33 
+  
+ 
+ 
+27002:2013 e CIS Critical Security Controls Version 8; Principais mecanismos de ataque (phishing, spear phising, 
+ransomware, dentre outros); Vulnerabilidades (Spoofing, Buffer Overflow, dentre outros); Organização da Segurança da 
+Informação (Política, Norm as e aspectos principais de um SGSI); Conceitos e ferramentas de Blue Team e Red Team; 
+Frameworks de Segurança da Informação e Segurança Cibernética MITRE ATT&CK e NIST Cybersecurity Framework; 
+Gerenciamento de riscos, de acordo com a norma ISO/IEC 27005:2 019; Soluções de segurança: Firewall, Intrusion 
+Detection System (IDS), Intrusion Prevention System (IPS), Security Information and Event Management (SIEM), Identity 
+Access Management (IAM), Antivirus/EDR, Antispam. 
+Conceitos e definições de Certificação digital e assinatura digital: chaves simétricas, públicas e privadas; Autoridade 
+certificadora e de registro; principais protocolos; Infraestrutura de chaves públicas ICP-Brasil. Criptografia: Algoritmos de 
+chave simétrica e de chave pública. VPN (Redes privadas virtuais). Funções de hash criptográficos. Controle de acesso à 
+rede e segurança na nuvem. 
+ 
+2 - SERVIÇOS DE COMPUTAÇÃO EM NUVEM 
+Conceitos de Computação em Nuvem: Elasticidade, Autoatendimento, pay -per-use; Diferença entre nuvem privada, 
+híbrida e nuvem pública (AWS, Azure), vantagens e desvantagens de cada uma; Conceituação de IaaS, PaaS e SaaS; 
+Infraestrutura como código (ANSIBLE); Arquitetura Serverless.  
+Conceituação sobre serviços de e -mail na nuvem: SPF, DKIM, DMARC, Antispam, relação entre DNS e serviço de e -mail, 
+Configuração de Tenant Office 365; Mecanismos de autenticação e autorização (OAuth, SAML, dentre outros); Múltiplos 
+fatores de autenticação (MFA). 
+ 
+3 - INFRAESTRUTURA DE SERVIDORES 
+Conceituação de serviços em sistemas Microsoft Windows: arquitetura do sistema operacional, Estruturas de Active 
+Directory, FMSO Roles, Usuários, Grupos, Listas de distribuição, integração com Azure AD e Office 365; programação em 
+windows powershell; Servi ços de rede Windows: DNS, DCHP, Radius, Autenticação, Autoridade Certificadora Interna, 
+Kerberos, Server Message Block (SMB), NTFS, compartilhamentos CIFS.  
+Conceituação de serviços em sistemas operacionais Linux (Redhat e Ubuntu) e servidores WEB Apache e NGINX (diretivas 
+principais); conceitos de LDAP, NFS; Noções de Contêineres e Orquestração (Docker, Kubernetes); programação em 
+linguagens de script: shell script (bash) e Python; Arquitetura de serviços WEB: protocolos HTTP, HTTPS, SSL, Proxy, 
+balanceamento de carga. 
+Conceitos de Armazenamento de dados e mecanismos de Backup: Equipamentos DAS, NAS, discos SSD, matrizes de 
+memórias flash (flash arrays), Armazenamento na nuvem, Armazenamento de objetos; Diferenças entre backups full, 
+diferencial e incremental, períodos de retenção, frequência de backup, políticas e estratégias de backup/restore. RAID.  
+Conceituação de formas de monitoramento de serviços de TI:  SNMP, RMON, MIB, monitoração via Agentes e Agentless, 
+plataforma Zabbix, Grafana, ElasticSearch, dentre outras. 
+ 
+4 - INFRAESTRUTURA DE REDES 
+Conceituação de Redes: Modelos de referência OSI e TCP/IP, Endereços IP, sub -rede, roteamento, principais protocolos 
+de rede, VLANs, Virtual IPs, NAT, conceitos e criação de redes IPv4 e IPv6; Noções de configurações de redes de acesso 
+(Camada 2): switches, interfaces físicas, transceivers, ARP/RARP, Spanning tree, IEEE 802.1x, RADIUS; Redes wireless (Wi-
+Fi): padrões IEEE 802.11a/n/ac/ax; Redes WAN: tecnologias MPLS, LAN -to-LAN, roteamento RIP e BGP, SD -WAN, Redes 
+definidas por software (SDN);  Ataques de rede e mecanismos de proteção (IDS, IPS, DDoS, WAF, DNSSEC, dentre outros); 
+Noções sobre protocolos para aplicações de áudio e vídeo (videoconferência, telefonia VoIP): SIP, H.323, conceitos e 
+padrões de codecs de áudio e vídeo. Meios de transmissão guiados , protocolo ethernet, protocolos de transporte da 
+internet: UDP e TCP, DNS.  
+ 
+5 - BANCOS DE DADOS 
+Banco de Dados. Conhecimentos de Sistemas Gerenciadores de Banco de Dados (SGBD) relacionais Microsoft SQL Server, 
+Oracle, MySQL e PostgreSQL. Instalação e configuração. Administração (infraestrutura e aplicação). Backup e 
+recuperação. Ajuste de desempenho  de banco de dados. Bancos de dados NoSQL. Linguagem SQL e linguagem de 
+programação para banco de dados. Ajuste de desempenho de aplicação. Ajuste de desempenho de comandos de SQL. 
+Tolerância a falhas e continuidade de operação. Auditoria de banco de dados . Configuração de auditoria de dados. 
+Produção de relatórios de auditoria. Transações. 
+ 
+6 – Projetos e GOVERNANÇA DE TI 
+Gerenciamento de Projetos e Produtos:  Abordagem Cascata. Abordagem PMBoK  versão 7 /PMI. Abordagem Ágil. 
+Gerenciamento de Serviços de TI: Fundamentos em Gerenciamento de Serviços segundo ITIL® versão 4. Planejamento 
+estratégico e tático de TIC. Gestão de Riscos de Tecnologia da Informação e Comunicação. Cobit 2019.  
+ 
+34 
+  
+ 
+ 
+ANEXO II – CONTEÚDO PROVA DISCURSIVA  
+ 
+❖ Perfis 1, 2 e 4 (Inspetor e Analista CVM – Mercado de Capitais): 
+• Questão 1 (20 pontos): Funcionamento do Mercado de Valores Mobiliários (ANEXO I deste Edital) . 
+• Questão 2 (20 pontos): Qualquer disciplina constante do conteúdo programático de conhecimentos 
+específicos do respectivo perfil (ANEXO I deste Edital). 
+ 
+❖ Perfil 3 – Inspetor CVM – Contabilidade e Auditoria:  
+• Questão 1 (20 pontos): Contabilidade (ANEXO I deste Edital). 
+• Questão 2 (10 pontos): Qualquer disciplina constante do conteúdo programático de conhecimentos 
+específicos do respectivo perfil (ANEXO I deste Edital). 
+• Questão 3 (10 pontos):  Língua Inglesa - Estratégias de leitura e de produção de textos em língua inglesa: 
+conhecimento de gêneros textuais diversos; capacidade de análise e de síntese; inferência e predição. 
+Aspectos morfológicos, sintáticos e gramaticais relevantes à compreens ão e à produção textual: formação e 
+classe de palavras; uso de artigos definidos e indefinidos; tempos e modos verbais; modais; voz passiva, 
+preposições, conjunções e pronomes; comparação; expressões idiomáticas; relações de subordina ção e 
+coordenação; uso de palavras mais frequentes, sinonímia e antonímia; concordância nominal e verbal. 
+Organização semântica e discursiva; coerência e coesão; colocação e coligação; funções retóricas; 
+conhecimento e uso de figuras de linguagem; discurso direto e indireto. 
+ 
+❖ Perfil 5 – Analista CVM – Gestão: 
+• Questão 1 (20 pontos): Administração e Gestão Pública (ANEXO I deste Edital) . 
+• Questão 2 (20 pontos): Qualquer disciplina constante do conteúdo programático de conhecimentos 
+específicos do respectivo perfil (ANEXO I deste Edital). 
+ 
+❖ Perfil 6 – Analista CVM – Contabilidade Pública:  
+• Questão 1 (20 pontos): Contabilidade aplicada ao setor Público (ANEXO I deste Edital). 
+• Questão 2 (20 pontos): Qualquer disciplina constante do conteúdo programático de conhecimentos 
+específicos do respectivo perfil (ANEXO I deste Edital). 
+ 
+❖ Perfil 7 – Analista CVM – Ciência de Dados: 
+• Questão 1 (20 pontos): Ciência de dados (ANEXO I deste Edital). 
+• Questão 2 (20 pontos): Qualquer disciplina constante do conteúdo programático de conhecimentos 
+específicos do respectivo perfil (ANEXO I deste Edital). 
+ 
+❖ Perfil 8 – Analista CVM – TI / Sistemas e Desenvolvimento: 
+• Questão 1 (20 pontos): Engenharia de Software e Desenvolvimento de Sistemas (ANEXO I deste Edital) . 
+• Questão 2 (20 pontos): Qualquer disciplina constante do conteúdo programático de conhecimentos 
+específicos do respectivo perfil (ANEXO I deste Edital). 
+ 
+❖ Perfil 9 – Analista CVM – TI / Infraestrutura e Segurança: 
+• Questão 1 (20 pontos): Segurança da Informação (ANEXO I deste Edital). 
+• Questão 2 (20 pontos): Qualquer disciplina constante do conteúdo programático de conhecimentos 
+específicos do respectivo perfil (ANEXO I deste Edital). 
+ 
+  
+35

@@ -1,0 +1,105 @@
+ÁREA: TECNOLOGIA DA INFORMAÇÃO
+ 
+CIÊNCIA DE DADOS
+1 Aprendizado de máquina. 1.1 Técnicas de classiﬁcação. 1.2 Técnicas de regressão. 1.3 Técnicas de
+agrupamento. 1.4 Técnicas de redução de dimensionalidade. 1.5 Técnicas de associação. 1.6 Sistemas de
+recomendação. 1.7 Processamento de linguagem natural (PLN). 1.8 Visão computacional. 1.9 Deep learning.
+2 Big Data. 2.1 Fundamentos. 2.2 Tipos de dados: estruturados, semiestruturados e não estruturados. 2.3
+Conceito dos cinco Vs. 2.4 Fluxo de big data: ingestão, processamento e disponibilização. 2.5
+Armazenamento de big data. 2.6 Pipeline de dados. 2.7 Processamento distribuído. 2.8 Conceito de data
+lake. 2.9 ETL X ELT. 2.10 Soluções de big data. 2.11 Arquiteturas de big data. 3 Tratamento de dados. 3.1
+Normalização numérica. 3.2 Discretização. 3.3 Tratamento de dados ausentes. 3.4 Tratamento de outliers e
+agregações. 4 Ingestão de dados. 4.1 Conceito de ingestão de dados. 4.2 Ingestão de dados estruturados,
+semiestruturados e não estruturados. 4.3 Ingestão de dados em lote (batch). 4.4 Ingestão de dados em
+streaming. 4.5 Ingestão de dados full × incremental. 4.6 Ingestão de dados CDC (change data capture). 5
+Processamento de dados. 5.1 Conceitos de processamento massivo e paralelo. 5.2 Processamento em lote
+(batch). 5.3 Processamento em tempo real (real time). 5.4 Processamento MapReduce. 6 Linguagens de
+programação e frameworks: 6.1 Python. 6.2 Linguagem de programação R. 6.3 Scala. 6.4 Java. 6.5 Spark
+(PySpark, Scala e Java). 6.6 Pandas. 6.7 Scikit-learn. 6.8 TensorFlow. 6.9 PyTorch. 6.10 Keras. 6.11 NLTK. 7
+Qualidade de dados. 7.1 Conceitos e deﬁnições. 7.2 Dimensões da qualidade de dados (visão DMBOK). 7.3
+Principais técnicas em qualidade de dados. 7.3.1 Proﬁling. 7.3.2 Matching. 7.3.3 Deduplicação. 7.3.4 Data
+cleansing. 7.3.5 Enriquecimento. 7.4 Boas práticas para adoção da qualidade de dados. 7.5 Processos de
+qualidade para modelos de dados. 
+ 
+DESENVOLVIMENTO DE SISTEMAS
+1 Modelagem de Processos de Negócio: 1.1 Conceitos básicos. 1.2 Identiﬁcação e delimitação de processos
+de negócio. 1.3 Técnicas de mapeamento de processos (modelos AS-IS). 1.4 Técnicas de análise e simulação
+de processos. 1.5 Construção e mensuração de indicadores de processos. 1.6 Técnicas de modelagem de
+processos (modelos TO-BE). 1.7 Modelagem de processos BPMN: notação, artefatos e atividades. 2
+Orientação a objetos. 2.1 Conceitos fundamentais, análise, modelagem e padrões de projeto. 2.2 Análise e
+projeto orientados a objetos 2.3 Polimorﬁsmo, Herança, Abstração e Encapsulamento. 3. Gerenciamento do
+ciclo de vida do software. 4 Metodologias de desenvolvimento de software. 4.1 Metodologias ágeis: Scrum,
+XP, Kanban e TDD. 4.2 Qualidade de software.  5. Utilização de Folhas de Estilo (CSS). 5.1 Páginas Web
+responsivas. 6 Arquitetura. 6.1 Arquitetura de aplicações em infraestrutura de containers (Docker e
+Kubernetes). 6.2 Arquitetura: Arquitetura de aplicações web, modelo MVC, Domain Driven Design (DDD),
+Arquitetura Hexagonal. 6.3 Arquitetura e desenvolvimento em nuvem 7. Soluções de integração entre
+sistemas. 7.1 API Rest. 8. Testes de software: Testes unitátios, Testes de Integração, TDD, BDD.
+Frameworks: JUnit 5, Mockito, Selenium, Jest. 9 Desenvolvimento. 9.1 Linguagens: Java (JDK 17) e
+Javascript (ECMASCript 2021). 9.2 Frameworks Java: Spring Boot, Spring MVC, Spring Core, Hibernate,
+QueryDSL, Flyway, Redis, Maven, Gradle. 9.3 Frameworks Javascript: Vue.JS 3.x, jQuery, Webpack, NPM,
+Bootstrap. 10. Ferramentas de versionamento GIT. 11. Segurança no desenvolvimento. 11.1 Práticas de
+programação segura e revisão de código. 11.2 Controles e testes de segurança para aplicações web. 11.3
+Controles e testes de segurança para Web Services. 11.4 Melhores Práticas de Codiﬁcação Segura OWASP.
+ 
+BANCOS DE DADOS
+1 Bancos de dados relacionais. 1.1 Sistemas gerenciadores de banco de dados: MS SQL Server e
+PostgreSQL. 1.1.1 Conceitos básicos. 1.1.2 Noções de Administração. 1.1.3 SQL (Procedural
+Language/Structured Query Language). 2 Banco de dados NoSQL (Key/Value, Orientados a Documentos e
+Grafos). 3 Técnicas para detecção de problemas e otimização de desempenho do SGBD e de consultas SQL. 
+4 Arquitetura e aplicações de data warehousing, ETL e Olap. 4.1 Técnicas de modelagem e otimização de
+bases de dados multidimensionais. 5 Business Intelligence - processo de coleta, organização, análise e
+compartilhamento de informações. 5.1 Dashboards: painéis e visualização de dados. 6 Governança de dados.
+6.1 Conceito e noção básica. 6.2 Arquitetura de Dados. 6.3 Qualidade de Dados. 6.4 Metadados.
+ 
+ Ó
+INFRAESTRUTURA TECNOLÓGICA
+1 Nuvem. 1.1 Conceitos: Nuvens pública e privada, IaaS, PaaS, SaaS, workloads. 1.2 Estratégias de
+Migração de Aplicações para o ambiente de nuvem, Governança, Computação Serverless, Segurança
+Compartilhada. 1.3 Tecnologias: Amazon Web Services (AWS), Microsoft Azure e Google Cloud Services,
+Docker, Kubernetes. 2 Devops e DevSecOps: 2.1 Conceitos. 2.2 Práticas. 2.3 Ferramentas. 3 Automação. 3.1
+Desenvolvimento de scripts de automação em Python. 3.2 Automação de infraestrutura de redes com
+Terraform. 3.3 Integração via API REST. 4 Gestão de Serviços. 4.1 Conceitos e práticas. 4.2 ITIL v4:
+Controle de Mudanças, Gerenciamento de Liberação, Gerenciamento de Incidentes, Gerenciamento de
+Problemas e Service Desk. 5 Gestão de Contratos e Contratações de Tecnologia da Informação. 5.1 Instrução
+normativa SGD/ME nº 1/2019 e suas atualizações. 5.2 Instrução Normativa ME nº 40/2020 e suas
+atualizações. 6 Telefonia IP. 6.1 Conceitos. 6.2 Elementos de uma rede de telefonia IP e suas funções. 6.3
+Protocolos SIP/H323. 7 Monitoramento. 7.1 Protocolos de monitoramento de sistemas e ativos de rede. 7.2
+Zabbix versão 5. 7.3 Monitoramento de desempenho de aplicações.
+ 
+SEGURANÇA DA INFORMAÇÃO
+1 Gestão de segurança da informação. 2. Gestão de continuidade do negócio. 3 Gestão de Identidade e
+Acesso. 4 Gestão de Riscos de Segurança da Informação. 5 Arquitetura Zero Trust: conceitos, práticas e
+tecnologias envolvidas. 6 Monitoramento de comportamento em redes de computadores: conceitos e
+tecnologias. 7 Controles de Segurança do CIS v8. 8 Gerenciamento, análise e correlacionamento de logs e
+eventos. 9 Processo de identiﬁcação, análise e correção de vulnerabilidades. 10 Tipos de ataques em redes e
+aplicações corporativas e medidas de proteção. 11 Segurança de endpoints. 12 Data Loss Prevention (DLP):
+conceitos e tecnologias. 13 Técnicas de testes de segurança em aplicações e sistemas. 14 Infraestrutura de
+chaves públicas e Certiﬁcação Digital. 15 Prevenção e tratamento de incidentes de segurança da informação.
+16 Instrução Normativa GSI nº 1/2020 e suas atualizações. 15 Normas complementares nº 05, 08 e 21 (e suas
+revisões) da Instrução Normativa nº 01/DSIC/GSIPR.
+ 
+ÁREA: CONTABILIDADE PÚBLICA E FINANÇAS
+ 
+AUDITORIA GOVERNAMENTAL
+1 O Sistema de Controle Interno do Poder Executivo Federal: ﬁnalidades, atividades, organização e
+competências (Lei n° 10.180/2001 e Decreto nº 3591/2000). 2 Manual de Orientações Técnicas da Atividade
+de Auditoria Interna Governamental do Poder Executivo Federal - MOT 2017. 3 Instrução Normativa SFC nº
+3, de 9 de julho de 2017. 4 Orientação Prática: Relatório de Auditoria, aprovado pela Portaria nº 1.037, de 7
+março de 2019. 5 Orientação Prática: Auditoria Anual de Contas, aprovado pela Portaria nº 2.035, de 28 de
+junho de 2019. 6 NBC TA Estrutura Conceitual - Estrutura Conceitual para Trabalhos de Asseguração. 6.1
+NBC TA 210(R1) - Objetivos Gerais do Auditor Independente e a Condução da Auditoria em Conformidade
+com Normas de Auditoria. 6.2 NBC TA 230(R1) - Documentação de Auditoria. 6.3 NBC TA 240 (R1)
+Responsabilidade do Auditor em Relação a Fraude, no Contexto da Auditoria de Demonstrações Contábeis.
+6.4 NBC TA 250 - Consideração de Leis e Regulamentos na Auditoria de Demonstrações Contábeis. 6.5
+NBC TA 320 (R1) - Materialidade no Planejamento e na Execução da Auditoria. 6.6 NBC TA 330 (R1) -
+Resposta do Auditor aos Riscos Avaliados. 6.7 NBC TA 450 (R1) - Avaliação das Distorções Identiﬁcadas
+durante a Auditoria. 6.8 NBC TA 500 (R1) - Evidência de Auditoria. 6.9 NBC TA 505 - Conﬁrmações
+Externas. 6.10 NBC TA 520 - Procedimentos Analíticos. 6.11 NBC TA 550 - Partes Relacionadas. 6.12 NBC
+TA 560 (R1) - Eventos Subsequentes. 6.13 NBC TA 600 (R1) - Considerações Especiais - Auditorias de
+Demonstrações Contábeis de Grupos, incluindo o Trabalho dos Auditores dos Componentes. 6.14 NBC TA
+610 - Utilização do Trabalho de Auditoria Interna. 6.15 NBC TA 620 - Utilização do Trabalho de
+Especialistas. 6.16 NBC TA 805 - Considerações Especiais - Auditoria de Quadros Isolados das
+Demonstrações Contábeis e de Elementos, Contas ou Itens Especíﬁcos das Demonstrações Contábeis. 7
+Tópicos Especíﬁcos de Auditoria Interna. 7.1 Estrutura Internacional de Práticas Proﬁssionais do Instituto
+dos Auditores Internos (IPPF/IIA). 7.2 O papel da auditoria interna na gestão de riscos. 7.3 O modelo de três
+linhas. 7.4 Instrução Normativa Conjunta MPOG/CGU nº 1, de 10 de maio de 2016.
