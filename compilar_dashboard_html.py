@@ -197,18 +197,11 @@ html_content = f"""<!DOCTYPE html>
 
         <!-- Ações do Cabeçalho: Status de Salvamento e Botões Compactos -->
         <div class="flex items-center space-x-2 flex-shrink-0">
-          <!-- Indicador de Salvamento Automático -->
-          <div class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200" title="Todas as alterações são salvas continuamente no navegador e na URL">
-            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="save-status-text">Salvo</span>
+          <!-- Indicador de Nuvem e Salvamento Automático -->
+          <div id="cloud-status-pill" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-2xs transition-all" title="Sincronização em nuvem ativa: salva continuamente e restaura seu progresso em qualquer navegador, celular ou aba anônima">
+            <span id="cloud-status-dot" class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            <span id="cloud-status-text">☁️ Nuvem Ativa</span>
           </div>
-
-          <!-- Botão de Sincronização por Link (Aba Anônima / Celular) -->
-          <button type="button" onclick="copyShareableLink()" class="inline-flex items-center px-2 sm:px-2.5 py-1 text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 rounded-md hover:bg-indigo-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 shadow-2xs transition-colors" title="Copiar link com todo o seu progresso atual para abrir em outro navegador, celular ou aba anônima">
-            <svg class="h-3.5 w-3.5 sm:mr-1 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-            <span class="hidden sm:inline">🔗 Link Sync</span>
-            <span class="sm:hidden">Sync</span>
-          </button>
 
           <!-- Grupo de Botões Secundários (Tailwind UI Button Group) -->
           <div class="inline-flex rounded-md shadow-xs" role="group">
@@ -679,25 +672,29 @@ html_content += """      </div>
     <!-- CONTEÚDO DA ABA 4: BACKUP & SINCRONIZAÇÃO EM NUVEM -->
     <div id="tab-backup" class="tab-content space-y-4" style="display: none;">
       
-      <!-- 1. Sincronização por Link (Aba Anônima, Celular e Outros Navegadores) -->
-      <div class="bg-white rounded-lg border border-indigo-200 shadow-xs p-4 sm:p-5 space-y-3 bg-gradient-to-r from-indigo-50/30 to-white">
+      <!-- 1. Sincronização Automática na Nuvem (Transparente) -->
+      <div class="bg-white rounded-lg border border-emerald-200 shadow-xs p-4 sm:p-5 space-y-3 bg-gradient-to-r from-emerald-50/40 to-white">
         <div class="flex items-center justify-between gap-2">
           <h2 class="text-sm sm:text-base font-bold text-gray-900 flex items-center gap-2">
-            <span>🔗 Sincronização por Link (Aba Anônima &amp; Dispositivos)</span>
+            <span>☁️ Sincronização Automática na Nuvem (Ativa)</span>
           </h2>
-          <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-            Recomendado
+          <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
+            Automático &amp; Transparente
           </span>
         </div>
         <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
-          Cada checkbox que você marca é compactado em tempo real diretamente na URL da barra de endereços do seu navegador. <strong>Para abrir seus estudos exatamente de onde você parou em uma Aba Anônima, no celular ou em outro navegador</strong>, copie o link gerado abaixo:
+          Cada tópico marcado é gravado instantaneamente no seu navegador e sincronizado em segundo plano com a nuvem. Ao acessar a URL fixa e limpa <strong><code class="bg-emerald-50 text-emerald-900 px-1.5 py-0.5 rounded font-mono text-xs border border-emerald-200">https://hugopedro.github.io/checklist_estudos/</code></strong> a partir de <strong>qualquer computador, aba anônima ou celular</strong>, seus tópicos aparecem automaticamente restaurados, mantendo sempre a URL limpa e sem precisar rodar nenhum comando.
         </p>
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
-          <input type="text" id="share-url-display" readonly class="flex-1 font-mono text-xs bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-gray-800 focus:bg-white select-all" onclick="this.select()" placeholder="Link de sincronização sendo gerado...">
-          <button type="button" onclick="copyShareableLink()" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 shadow-xs transition-colors whitespace-nowrap">
-            <svg class="h-3.5 w-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-            Copiar Link Sync
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <button type="button" onclick="performCloudSync(true)" class="inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-xs font-semibold rounded-md text-white bg-emerald-600 hover:bg-emerald-700 shadow-xs transition-colors">
+            <svg class="h-3.5 w-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+            Forçar Sincronização na Nuvem
           </button>
+          <button type="button" onclick="loadProgress(true)" class="inline-flex items-center justify-center px-3 py-1.5 border border-gray-300 shadow-xs text-xs font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+            <svg class="h-3.5 w-3.5 mr-1.5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Recarregar Agora da Nuvem
+          </button>
+          <span id="backup-cloud-status" class="text-xs text-gray-600 font-medium"></span>
         </div>
       </div>
 
@@ -791,16 +788,16 @@ html_content += """      </div>
     <span id="toast-text">Progresso salvo com sucesso!</span>
   </div>
 
-  <!-- SCRIPT JS INTERATIVO E PERSISTÊNCIA -->
+  <!-- SCRIPT JS INTERATIVO E PERSISTÊNCIA NA NUVEM -->
   <script>
     const STORAGE_KEY = 'concursos_elite_checklist_v1';
+    const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a09d98f701a0c414aa34618b';
     const GH_REPO = 'hugopedro/checklist_estudos';
     const ALL_ITEM_IDS = /* ALL_ITEM_IDS_PLACEHOLDER */ [];
-    const ID_TO_INDEX = {};
-    ALL_ITEM_IDS.forEach((id, idx) => { ID_TO_INDEX[id] = idx; });
 
     let completedItems = new Set();
     let currentFilter = 'all';
+    let cloudSyncTimer = null;
 
     // Inicialização ao carregar o DOM
     document.addEventListener('DOMContentLoaded', () => {
@@ -808,113 +805,76 @@ html_content += """      </div>
       initGitHubTokenInput();
     });
 
-    // Codifica conjunto de itens para string de URL hash compacta
-    function encodeState(set) {
-      if (!set || set.size === 0) return '';
-      if (set.size <= 25) {
-        const indices = Array.from(set).map(id => ID_TO_INDEX[id]).filter(x => x !== undefined).sort((a,b) => a-b);
-        return 'p=' + indices.join(',');
+    // Atualiza status visual do indicador de nuvem
+    function updateCloudStatus(status, text) {
+      const pill = document.getElementById('cloud-status-pill');
+      const dot = document.getElementById('cloud-status-dot');
+      const txt = document.getElementById('cloud-status-text');
+      const backupStat = document.getElementById('backup-cloud-status');
+
+      if (status === 'syncing') {
+        if (dot) dot.className = 'h-2 w-2 rounded-full bg-amber-500 animate-ping';
+        if (txt) txt.textContent = text || '☁️ Sincronizando...';
+        if (pill) pill.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200 transition-all';
+      } else if (status === 'synced') {
+        if (dot) dot.className = 'h-2 w-2 rounded-full bg-emerald-500';
+        const count = completedItems.size;
+        const defaultText = count > 0 ? `☁️ ${count} salvo${count > 1 ? 's' : ''}` : '☁️ Nuvem Ativa';
+        if (txt) txt.textContent = text || defaultText;
+        if (pill) pill.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 transition-all';
+        if (backupStat) backupStat.textContent = `✓ Nuvem sincronizada às ${new Date().toLocaleTimeString()} (${count} tópicos)`;
+      } else if (status === 'error') {
+        if (dot) dot.className = 'h-2 w-2 rounded-full bg-gray-400';
+        if (txt) txt.textContent = text || '☁️ Salvo local';
+        if (pill) pill.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-50 text-gray-600 border border-gray-200 transition-all';
       }
-      const bytes = new Uint8Array(88);
-      set.forEach(id => {
-        const idx = ID_TO_INDEX[id];
-        if (idx !== undefined) {
-          const byteIdx = Math.floor(idx / 8);
-          const bitIdx = idx % 8;
-          bytes[byteIdx] |= (1 << bitIdx);
-        }
-      });
-      let binary = '';
-      for (let i = 0; i < bytes.length; i++) {
-        binary += String.fromCharCode(bytes[i]);
-      }
-      return 'b=' + btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
     }
 
-    // Decodifica string de URL hash para conjunto de itens
-    function decodeState(hashStr) {
-      if (!hashStr) return null;
-      const hash = hashStr.replace(/^#/, '');
-      if (!hash) return null;
-      const result = new Set();
-      if (hash.startsWith('p=')) {
-        const parts = hash.slice(2).split(',');
-        parts.forEach(p => {
-          const idx = parseInt(p, 10);
-          if (!isNaN(idx) && ALL_ITEM_IDS[idx]) {
-            result.add(ALL_ITEM_IDS[idx]);
+    // Agenda sincronização debounced com a nuvem (1200ms)
+    function scheduleCloudSync() {
+      updateCloudStatus('syncing', '☁️ Salvando...');
+      if (cloudSyncTimer) clearTimeout(cloudSyncTimer);
+      cloudSyncTimer = setTimeout(() => performCloudSync(false), 1200);
+    }
+
+    // Executa a requisição PUT para o endpoint REST da nuvem
+    async function performCloudSync(isManual = false) {
+      updateCloudStatus('syncing', '☁️ Enviando...');
+      try {
+        const arr = Array.from(completedItems);
+        const payload = {
+          name: 'hugopedro_checklist',
+          data: {
+            items: arr,
+            updatedAt: new Date().toISOString()
           }
+        };
+
+        const resp = await fetch(CLOUD_SYNC_URL, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
         });
-        return result;
-      }
-      if (hash.startsWith('b=')) {
-        try {
-          let b64 = hash.slice(2).replace(/-/g, '+').replace(/_/g, '/');
-          while (b64.length % 4) b64 += '=';
-          const binary = atob(b64);
-          const bytes = new Uint8Array(binary.length);
-          for (let i = 0; i < binary.length; i++) {
-            bytes[i] = binary.charCodeAt(i);
+
+        if (resp.ok) {
+          updateCloudStatus('synced');
+          if (isManual) {
+            showToast('☁️ Sincronizado com a nuvem com sucesso!');
           }
-          for (let idx = 0; idx < ALL_ITEM_IDS.length; idx++) {
-            const byteIdx = Math.floor(idx / 8);
-            const bitIdx = idx % 8;
-            if (byteIdx < bytes.length && (bytes[byteIdx] & (1 << bitIdx))) {
-              result.add(ALL_ITEM_IDS[idx]);
-            }
-          }
-          return result;
-        } catch(e) {
-          console.error("Erro ao decodificar hash:", e);
-          return null;
+        } else {
+          updateCloudStatus('error', 'Salvo local');
         }
-      }
-      return null;
-    }
-
-    // Atualiza o hash da URL na barra de endereços do navegador
-    function updateHash() {
-      const hashStr = encodeState(completedItems);
-      const newUrl = hashStr ? '#' + hashStr : window.location.pathname + window.location.search;
-      history.replaceState(null, '', newUrl);
-
-      const shareInput = document.getElementById('share-url-display');
-      if (shareInput) {
-        shareInput.value = window.location.origin + window.location.pathname + (hashStr ? '#' + hashStr : '');
+      } catch (err) {
+        console.warn('Erro na sincronização em nuvem:', err);
+        updateCloudStatus('error', 'Salvo local');
       }
     }
 
-    // Copia o link de sincronização para a área de transferência
-    function copyShareableLink() {
-      const hashStr = encodeState(completedItems);
-      const fullUrl = window.location.origin + window.location.pathname + (hashStr ? '#' + hashStr : '');
-      
-      function onCopied() {
-        showToast("🔗 Link copiado! Cole em uma aba anônima ou celular para carregar.");
-      }
-
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(fullUrl).then(onCopied).catch(() => fallbackCopy(fullUrl, onCopied));
-      } else {
-        fallbackCopy(fullUrl, onCopied);
-      }
-    }
-
-    // Carrega dados salvos com cascata de fallback: URL Hash -> LocalStorage -> Nuvem (progresso.json)
-    async function loadProgress() {
-      // 1. Prioridade 1: URL Hash (se acessou via link de sincronização)
-      const hashState = decodeState(window.location.hash);
-      if (hashState && hashState.size > 0) {
-        completedItems = hashState;
-        saveProgress(false);
-        updateUI();
-        updateHash();
-        showToast(`🔗 Carregado do link: ${completedItems.size} tópicos concluídos!`);
-        return;
-      }
-
-      // 2. Prioridade 2: LocalStorage do navegador atual
+    // Carrega dados salvos: LocalStorage imediato + Nuvem REST assíncrona
+    async function loadProgress(isManual = false) {
       let loadedFromLocal = false;
+
+      // 1. Carrega imediatamente do LocalStorage (tempo de resposta: 0ms)
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
         if (raw) {
@@ -922,61 +882,57 @@ html_content += """      </div>
           if (Array.isArray(arr) && arr.length > 0) {
             completedItems = new Set(arr);
             loadedFromLocal = true;
+            updateUI();
+            updateCloudStatus('synced');
           }
         }
       } catch (e) {
         console.error("Erro ao ler localStorage:", e);
       }
 
-      if (loadedFromLocal) {
-        updateUI();
-        updateHash();
-        const statusText = document.getElementById('save-status-text');
-        if (statusText && completedItems.size > 0) {
-          const count = completedItems.size;
-          statusText.textContent = `${count} salvo${count > 1 ? 's' : ''}`;
-        }
-        return;
-      }
-
-      // 3. Prioridade 3: Nuvem do Repositório (progresso.json)
-      // Ideal para abas anônimas, novo navegador ou primeiro acesso em novo dispositivo!
+      // 2. Consulta a nuvem REST (traz o progresso de qualquer navegador / aba anônima)
+      updateCloudStatus('syncing', '☁️ Conectando...');
       try {
-        const resp = await fetch('./progresso.json?t=' + Date.now());
+        const resp = await fetch(CLOUD_SYNC_URL + '?t=' + Date.now());
         if (resp.ok) {
-          const cloudData = await resp.json();
-          if (cloudData && Array.isArray(cloudData.completed) && cloudData.completed.length > 0) {
-            completedItems = new Set(cloudData.completed);
-            saveProgress(true);
+          const resJson = await resp.json();
+          if (resJson && resJson.data && Array.isArray(resJson.data.items)) {
+            const cloudArr = resJson.data.items;
+
+            // Mesclar itens da nuvem no conjunto local
+            cloudArr.forEach(id => completedItems.add(id));
+
+            // Grava o conjunto unificado no LocalStorage
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(completedItems)));
             updateUI();
-            showToast(`☁️ Carregado da nuvem: ${completedItems.size} tópicos concluídos!`);
+            updateCloudStatus('synced');
+
+            if (cloudArr.length > 0 && (isManual || !loadedFromLocal)) {
+              showToast(`☁️ Progresso restaurado da nuvem (${completedItems.size} tópicos)!`);
+            }
+
+            // Se o LocalStorage tinha itens novos que não estavam na nuvem, atualiza a nuvem
+            if (completedItems.size > cloudArr.length) {
+              scheduleCloudSync();
+            }
             return;
           }
         }
-      } catch (e) {
-        // Arquivo remoto indisponível ou vazio
+        updateCloudStatus('synced');
+      } catch (err) {
+        console.warn('Falha ao conectar com a nuvem:', err);
+        updateCloudStatus(loadedFromLocal ? 'synced' : 'error');
       }
 
       updateUI();
-      updateHash();
     }
 
-    // Salva continuamente no localStorage e atualiza a URL
-    function saveProgress(updateUrl = true) {
+    // Salva continuamente no localStorage e agenda envio para a nuvem
+    function saveProgress() {
       try {
         const arr = Array.from(completedItems);
         localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
-        
-        if (updateUrl) {
-          updateHash();
-        }
-
-        const statusText = document.getElementById('save-status-text');
-        if (statusText) {
-          const count = completedItems.size;
-          statusText.textContent = count > 0 ? `${count} salvo${count > 1 ? 's' : ''}` : 'Salvo';
-        }
-        showToast("✓ Progresso salvo!");
+        scheduleCloudSync();
       } catch (e) {
         console.error("Erro ao salvar no localStorage:", e);
         showToast("⚠️ Erro ao salvar no navegador.");
@@ -1416,13 +1372,34 @@ html_content += """      </div>
       reader.readAsText(file);
     }
 
-    // Resetar progresso
-    function resetAllProgress() {
-      if (confirm("Tem certeza de que deseja limpar todo o progresso salvo?")) {
+    // Resetar progresso local e na nuvem
+    async function resetAllProgress() {
+      if (confirm("Tem certeza de que deseja limpar todo o progresso salvo na nuvem e no navegador?")) {
         completedItems.clear();
-        saveProgress();
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch(e) {}
         updateUI();
-        showToast("🗑️ Progresso resetado.");
+        updateCloudStatus('syncing', '☁️ Limpando...');
+
+        try {
+          await fetch(CLOUD_SYNC_URL, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: 'hugopedro_checklist',
+              data: {
+                items: [],
+                updatedAt: new Date().toISOString()
+              }
+            })
+          });
+          updateCloudStatus('synced', '☁️ Nuvem Ativa');
+          showToast("🗑️ Progresso resetado na nuvem e localmente.");
+        } catch(e) {
+          updateCloudStatus('error', 'Salvo local');
+          showToast("🗑️ Progresso resetado localmente.");
+        }
       }
     }
 

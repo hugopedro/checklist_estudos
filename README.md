@@ -15,11 +15,11 @@ Aplicação *standalone* (sem dependências de servidor ou banco externo), desen
   - **669 Tópicos Curriculares** divididos nas 10 disciplinas do Tronco Comum Antifrágil.
   - **23 Metas Mensais** de progressão cronológica rumo ao horizonte 2028.
   - **6 Temas Estratégicos de Provas Discursivas Técnicas**.
-- **💾 Salvamento Automático & Sincronização Multi-Dispositivos**:
-  - **Zero perda de dados:** Cada clique em qualquer tópico salva instantaneamente no `localStorage` do navegador e atualiza o link na barra de endereços.
-  - **🔗 Sincronização por Link (Aba Anônima & Celular):** A cada alteração, a URL é atualizada em tempo real com o estado compactado (ex: `#p=...` ou `#b=...`). Basta clicar no botão **🔗 Link Sync** no topo e abrir em qualquer aba anônima, navegador ou celular para continuar exatamente de onde você parou!
-  - **☁️ Sincronização em Nuvem (GitHub `progresso.json`):** Salve seu progresso diretamente no repositório GitHub pela interface ou via CLI (`python3 sincronizar_progresso.py`). Assim, mesmo quem acessar a URL pura (`hugopedro.github.io/checklist_estudos`) em aba anônima ou novo dispositivo verá o progresso carregado automaticamente!
-  - **Feedback visual imediato:** A linha fica destacada em amarelo suave (`.concluida`), o checkbox é marcado, o badge no topo exibe a quantidade de itens salvos e uma notificação *toast* confirma o salvamento.
+- **💾 Salvamento Automático & Sincronização Transparente na Nuvem**:
+  - **Zero atrito e zero comandos:** Cada clique em qualquer tópico salva instantaneamente no navegador e sincroniza em segundo plano com a nuvem via API REST.
+  - **URL Fixa e Limpa:** Não há hashes, fragmentos ou parâmetros dinâmicos na barra de endereços. A URL permanece sempre limpa: `https://hugopedro.github.io/checklist_estudos/`.
+  - **Multi-dispositivos & Aba Anônima:** Ao abrir `https://hugopedro.github.io/checklist_estudos/` em qualquer computador, celular ou aba anônima, todos os seus tópicos marcados aparecem automaticamente restaurados da nuvem.
+  - **Feedback visual imediato:** A linha fica destacada em amarelo suave (`.concluida`), o checkbox é marcado, o badge no topo exibe o status `☁️ Nuvem Ativa` e uma notificação *toast* confirma a gravação.
   - **Backup Físico JSON:** Use o botão **Exportar** para baixar seu progresso em arquivo JSON e **Importar** para restaurar offline a qualquer momento.
 - **Ferramentas de Estudo Ágeis**:
   - Botão de cópia rápida 📋 ao lado de cada tópico (facilita colar comandos de prompt no ChatGPT, criar cards no Anki ou notas no Notion).
