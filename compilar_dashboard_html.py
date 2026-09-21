@@ -37,6 +37,24 @@ tier_a_total_count = sum(
     for d in disciplines if d["num"] <= 5
 )
 
+# Coleta ordenada de todos os 698 IDs únicos de itens
+all_item_ids = []
+for d in disciplines:
+    for g in d["groups"]:
+        for it in g["items"]:
+            all_item_ids.append(it["id"])
+    for chk in d.get("checklists", []):
+        all_item_ids.append(chk["id"])
+
+for s in semesters:
+    for m in s["months"]:
+        all_item_ids.append(m["id"])
+
+for dis in discursivas:
+    all_item_ids.append(dis["id"])
+
+all_item_ids_json = json.dumps(all_item_ids)
+
 html_content = f"""<!DOCTYPE html>
 <html lang="pt-BR" class="h-full bg-gray-50">
 <head>
@@ -180,10 +198,17 @@ html_content = f"""<!DOCTYPE html>
         <!-- Ações do Cabeçalho: Status de Salvamento e Botões Compactos -->
         <div class="flex items-center space-x-2 flex-shrink-0">
           <!-- Indicador de Salvamento Automático -->
-          <div class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200" title="Todas as alterações são salvas continuamente no navegador">
+          <div class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200" title="Todas as alterações são salvas continuamente no navegador e na URL">
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span id="save-status-text">Salvo</span>
           </div>
+
+          <!-- Botão de Sincronização por Link (Aba Anônima / Celular) -->
+          <button type="button" onclick="copyShareableLink()" class="inline-flex items-center px-2 sm:px-2.5 py-1 text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 rounded-md hover:bg-indigo-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 shadow-2xs transition-colors" title="Copiar link com todo o seu progresso atual para abrir em outro navegador, celular ou aba anônima">
+            <svg class="h-3.5 w-3.5 sm:mr-1 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            <span class="hidden sm:inline">🔗 Link Sync</span>
+            <span class="sm:hidden">Sync</span>
+          </button>
 
           <!-- Grupo de Botões Secundários (Tailwind UI Button Group) -->
           <div class="inline-flex rounded-md shadow-xs" role="group">
@@ -651,16 +676,67 @@ for dsc in discursivas:
 html_content += """      </div>
     </div>
 
-    <!-- CONTEÚDO DA ABA 4: BACKUP & PROTOCOLO ANTI-FRACASSO -->
+    <!-- CONTEÚDO DA ABA 4: BACKUP & SINCRONIZAÇÃO EM NUVEM -->
     <div id="tab-backup" class="tab-content space-y-4" style="display: none;">
       
-      <!-- Painel de Gerenciamento de Backup -->
+      <!-- 1. Sincronização por Link (Aba Anônima, Celular e Outros Navegadores) -->
+      <div class="bg-white rounded-lg border border-indigo-200 shadow-xs p-4 sm:p-5 space-y-3 bg-gradient-to-r from-indigo-50/30 to-white">
+        <div class="flex items-center justify-between gap-2">
+          <h2 class="text-sm sm:text-base font-bold text-gray-900 flex items-center gap-2">
+            <span>🔗 Sincronização por Link (Aba Anônima &amp; Dispositivos)</span>
+          </h2>
+          <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+            Recomendado
+          </span>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          Cada checkbox que você marca é compactado em tempo real diretamente na URL da barra de endereços do seu navegador. <strong>Para abrir seus estudos exatamente de onde você parou em uma Aba Anônima, no celular ou em outro navegador</strong>, copie o link gerado abaixo:
+        </p>
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
+          <input type="text" id="share-url-display" readonly class="flex-1 font-mono text-xs bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-gray-800 focus:bg-white select-all" onclick="this.select()" placeholder="Link de sincronização sendo gerado...">
+          <button type="button" onclick="copyShareableLink()" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 shadow-xs transition-colors whitespace-nowrap">
+            <svg class="h-3.5 w-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            Copiar Link Sync
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Sincronização Direta com Repositório GitHub (progresso.json) -->
       <div class="bg-white rounded-lg border border-gray-200 shadow-xs p-4 sm:p-5 space-y-3">
         <h2 class="text-sm sm:text-base font-bold text-gray-900 flex items-center gap-2">
-          <span>💾 Backup e Sincronização Local</span>
+          <span>☁️ Publicação Global no Repositório GitHub (<code class="font-mono text-xs text-indigo-700">progresso.json</code>)</span>
         </h2>
         <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
-          Seus dados e cliques são persistidos continuamente no <code class="bg-gray-100 px-1.5 py-0.5 rounded text-indigo-700 font-mono text-xs">localStorage</code> deste navegador. Se você quiser transferir seus estudos para outro computador ou guardar uma cópia de segurança, utilize as opções abaixo:
+          Ao salvar seu progresso no repositório GitHub, qualquer pessoa ou navegador (mesmo digitando a URL pura <code class="bg-gray-100 px-1 py-0.5 rounded text-gray-800 font-mono text-xs">hugopedro.github.io/checklist_estudos</code> em aba anônima) carregará automaticamente os tópicos que você marcou como concluídos:
+        </p>
+        <div class="space-y-2.5 pt-1">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+            <input type="password" id="gh-token-input" placeholder="GitHub Personal Access Token (opcional, salvo apenas neste navegador)..." class="flex-1 text-xs border border-gray-300 rounded-md px-3 py-1.5 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 font-mono">
+            <button type="button" onclick="saveGitHubTokenFromInput()" class="inline-flex items-center justify-center px-3 py-1.5 border border-gray-300 shadow-xs text-xs font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 whitespace-nowrap">
+              Salvar Token
+            </button>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            <button type="button" onclick="syncToGitHub()" class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-semibold rounded-md text-white bg-gray-900 hover:bg-gray-800 shadow-xs transition-colors">
+              <svg class="h-3.5 w-3.5 mr-1.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+              Salvar Agora no GitHub
+            </button>
+            <button type="button" onclick="pullFromGitHub()" class="inline-flex items-center px-3 py-1.5 border border-gray-300 shadow-xs text-xs font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+              <svg class="h-3.5 w-3.5 mr-1.5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/></svg>
+              Recarregar da Nuvem
+            </button>
+            <span id="gh-sync-status" class="text-xs text-gray-500 ml-1"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Backup e Restauração Local (JSON) -->
+      <div class="bg-white rounded-lg border border-gray-200 shadow-xs p-4 sm:p-5 space-y-3">
+        <h2 class="text-sm sm:text-base font-bold text-gray-900 flex items-center gap-2">
+          <span>💾 Backup e Restauração Local (Arquivo JSON)</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          Para guardar uma cópia física em disco de seus estudos ou transferir via pendrive/e-mail sem conexão com a internet:
         </p>
         <div class="flex flex-wrap items-center gap-2.5 pt-1">
           <button type="button" onclick="exportProgress()" class="inline-flex items-center px-3 py-1.5 border border-gray-300 shadow-xs text-xs font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -718,39 +794,183 @@ html_content += """      </div>
   <!-- SCRIPT JS INTERATIVO E PERSISTÊNCIA -->
   <script>
     const STORAGE_KEY = 'concursos_elite_checklist_v1';
+    const GH_REPO = 'hugopedro/checklist_estudos';
+    const ALL_ITEM_IDS = /* ALL_ITEM_IDS_PLACEHOLDER */ [];
+    const ID_TO_INDEX = {};
+    ALL_ITEM_IDS.forEach((id, idx) => { ID_TO_INDEX[id] = idx; });
+
     let completedItems = new Set();
     let currentFilter = 'all';
 
     // Inicialização ao carregar o DOM
     document.addEventListener('DOMContentLoaded', () => {
       loadProgress();
-      updateUI();
+      initGitHubTokenInput();
     });
 
-    // Carrega dados salvos do localStorage
-    function loadProgress() {
+    // Codifica conjunto de itens para string de URL hash compacta
+    function encodeState(set) {
+      if (!set || set.size === 0) return '';
+      if (set.size <= 25) {
+        const indices = Array.from(set).map(id => ID_TO_INDEX[id]).filter(x => x !== undefined).sort((a,b) => a-b);
+        return 'p=' + indices.join(',');
+      }
+      const bytes = new Uint8Array(88);
+      set.forEach(id => {
+        const idx = ID_TO_INDEX[id];
+        if (idx !== undefined) {
+          const byteIdx = Math.floor(idx / 8);
+          const bitIdx = idx % 8;
+          bytes[byteIdx] |= (1 << bitIdx);
+        }
+      });
+      let binary = '';
+      for (let i = 0; i < bytes.length; i++) {
+        binary += String.fromCharCode(bytes[i]);
+      }
+      return 'b=' + btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    }
+
+    // Decodifica string de URL hash para conjunto de itens
+    function decodeState(hashStr) {
+      if (!hashStr) return null;
+      const hash = hashStr.replace(/^#/, '');
+      if (!hash) return null;
+      const result = new Set();
+      if (hash.startsWith('p=')) {
+        const parts = hash.slice(2).split(',');
+        parts.forEach(p => {
+          const idx = parseInt(p, 10);
+          if (!isNaN(idx) && ALL_ITEM_IDS[idx]) {
+            result.add(ALL_ITEM_IDS[idx]);
+          }
+        });
+        return result;
+      }
+      if (hash.startsWith('b=')) {
+        try {
+          let b64 = hash.slice(2).replace(/-/g, '+').replace(/_/g, '/');
+          while (b64.length % 4) b64 += '=';
+          const binary = atob(b64);
+          const bytes = new Uint8Array(binary.length);
+          for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+          }
+          for (let idx = 0; idx < ALL_ITEM_IDS.length; idx++) {
+            const byteIdx = Math.floor(idx / 8);
+            const bitIdx = idx % 8;
+            if (byteIdx < bytes.length && (bytes[byteIdx] & (1 << bitIdx))) {
+              result.add(ALL_ITEM_IDS[idx]);
+            }
+          }
+          return result;
+        } catch(e) {
+          console.error("Erro ao decodificar hash:", e);
+          return null;
+        }
+      }
+      return null;
+    }
+
+    // Atualiza o hash da URL na barra de endereços do navegador
+    function updateHash() {
+      const hashStr = encodeState(completedItems);
+      const newUrl = hashStr ? '#' + hashStr : window.location.pathname + window.location.search;
+      history.replaceState(null, '', newUrl);
+
+      const shareInput = document.getElementById('share-url-display');
+      if (shareInput) {
+        shareInput.value = window.location.origin + window.location.pathname + (hashStr ? '#' + hashStr : '');
+      }
+    }
+
+    // Copia o link de sincronização para a área de transferência
+    function copyShareableLink() {
+      const hashStr = encodeState(completedItems);
+      const fullUrl = window.location.origin + window.location.pathname + (hashStr ? '#' + hashStr : '');
+      
+      function onCopied() {
+        showToast("🔗 Link copiado! Cole em uma aba anônima ou celular para carregar.");
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(fullUrl).then(onCopied).catch(() => fallbackCopy(fullUrl, onCopied));
+      } else {
+        fallbackCopy(fullUrl, onCopied);
+      }
+    }
+
+    // Carrega dados salvos com cascata de fallback: URL Hash -> LocalStorage -> Nuvem (progresso.json)
+    async function loadProgress() {
+      // 1. Prioridade 1: URL Hash (se acessou via link de sincronização)
+      const hashState = decodeState(window.location.hash);
+      if (hashState && hashState.size > 0) {
+        completedItems = hashState;
+        saveProgress(false);
+        updateUI();
+        updateHash();
+        showToast(`🔗 Carregado do link: ${completedItems.size} tópicos concluídos!`);
+        return;
+      }
+
+      // 2. Prioridade 2: LocalStorage do navegador atual
+      let loadedFromLocal = false;
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
         if (raw) {
           const arr = JSON.parse(raw);
-          completedItems = new Set(arr);
+          if (Array.isArray(arr) && arr.length > 0) {
+            completedItems = new Set(arr);
+            loadedFromLocal = true;
+          }
         }
+      } catch (e) {
+        console.error("Erro ao ler localStorage:", e);
+      }
+
+      if (loadedFromLocal) {
+        updateUI();
+        updateHash();
         const statusText = document.getElementById('save-status-text');
         if (statusText && completedItems.size > 0) {
           const count = completedItems.size;
           statusText.textContent = `${count} salvo${count > 1 ? 's' : ''}`;
         }
-      } catch (e) {
-        console.error("Erro ao ler localStorage:", e);
-        completedItems = new Set();
+        return;
       }
+
+      // 3. Prioridade 3: Nuvem do Repositório (progresso.json)
+      // Ideal para abas anônimas, novo navegador ou primeiro acesso em novo dispositivo!
+      try {
+        const resp = await fetch('./progresso.json?t=' + Date.now());
+        if (resp.ok) {
+          const cloudData = await resp.json();
+          if (cloudData && Array.isArray(cloudData.completed) && cloudData.completed.length > 0) {
+            completedItems = new Set(cloudData.completed);
+            saveProgress(true);
+            updateUI();
+            showToast(`☁️ Carregado da nuvem: ${completedItems.size} tópicos concluídos!`);
+            return;
+          }
+        }
+      } catch (e) {
+        // Arquivo remoto indisponível ou vazio
+      }
+
+      updateUI();
+      updateHash();
     }
 
-    // Salva continuamente no localStorage
-    function saveProgress() {
+    // Salva continuamente no localStorage e atualiza a URL
+    function saveProgress(updateUrl = true) {
       try {
         const arr = Array.from(completedItems);
         localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+        
+        if (updateUrl) {
+          updateHash();
+        }
+
         const statusText = document.getElementById('save-status-text');
         if (statusText) {
           const count = completedItems.size;
@@ -1205,11 +1425,127 @@ html_content += """      </div>
         showToast("🗑️ Progresso resetado.");
       }
     }
+
+    // Gestão de Sincronização com GitHub
+    function initGitHubTokenInput() {
+      const token = localStorage.getItem('gh_sync_token') || '';
+      const input = document.getElementById('gh-token-input');
+      if (input && token) {
+        input.value = token;
+      }
+    }
+
+    function saveGitHubTokenFromInput() {
+      const input = document.getElementById('gh-token-input');
+      if (input) {
+        const token = input.value.trim();
+        if (token) {
+          localStorage.setItem('gh_sync_token', token);
+          showToast("✓ Token do GitHub salvo neste navegador!");
+        } else {
+          localStorage.removeItem('gh_sync_token');
+          showToast("Token removido.");
+        }
+      }
+    }
+
+    async function syncToGitHub() {
+      let token = localStorage.getItem('gh_sync_token') || '';
+      if (!token) {
+        const input = document.getElementById('gh-token-input');
+        if (input && input.value.trim()) {
+          token = input.value.trim();
+          localStorage.setItem('gh_sync_token', token);
+        } else {
+          const promptToken = prompt("Para salvar diretamente no GitHub, insira seu Personal Access Token (PAT):");
+          if (!promptToken) return;
+          token = promptToken.trim();
+          localStorage.setItem('gh_sync_token', token);
+          if (input) input.value = token;
+        }
+      }
+
+      showToast("☁️ Enviando progresso para o repositório GitHub...");
+
+      try {
+        let sha = null;
+        const getResp = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/progresso.json`, {
+          headers: {
+            "Authorization": `token ${token}`,
+            "Accept": "application/vnd.github+json"
+          }
+        });
+
+        if (getResp.ok) {
+          const fileData = await getResp.json();
+          sha = fileData.sha;
+        }
+
+        const arr = Array.from(completedItems);
+        const contentObj = {
+          updated_at: new Date().toISOString(),
+          version: "1.0",
+          total_items: ALL_ITEM_IDS.length,
+          completed_count: arr.length,
+          completed: arr
+        };
+
+        const contentB64 = btoa(unescape(encodeURIComponent(JSON.stringify(contentObj, null, 2))));
+
+        const putResp = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/progresso.json`, {
+          method: "PUT",
+          headers: {
+            "Authorization": `token ${token}`,
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            message: `chore: sincronizar progresso (${arr.length} tópicos concluídos)`,
+            content: contentB64,
+            sha: sha || undefined
+          })
+        });
+
+        if (putResp.ok) {
+          showToast("☁️ Sucesso! Progresso publicado no repositório GitHub.");
+          const stat = document.getElementById('gh-sync-status');
+          if (stat) stat.textContent = `✓ Publicado às ${new Date().toLocaleTimeString()}`;
+        } else {
+          const errData = await putResp.json();
+          alert("Erro ao enviar para GitHub: " + (errData.message || JSON.stringify(errData)));
+        }
+      } catch (err) {
+        alert("Erro na conexão com GitHub: " + err.message);
+      }
+    }
+
+    async function pullFromGitHub() {
+      showToast("📥 Baixando progresso do GitHub...");
+      try {
+        const resp = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/progresso.json?t=` + Date.now());
+        if (resp.ok) {
+          const data = await resp.json();
+          if (data && Array.isArray(data.completed)) {
+            completedItems = new Set(data.completed);
+            saveProgress(true);
+            updateUI();
+            showToast(`☁️ Atualizado da nuvem: ${completedItems.size} tópicos marcados!`);
+            return;
+          }
+        }
+        showToast("Nenhum progresso encontrado na nuvem.");
+      } catch (err) {
+        alert("Erro ao puxar dados: " + err.message);
+      }
+    }
   </script>
 
 </body>
 </html>
 """
+
+# Injetar os 698 IDs ordenados no JavaScript
+html_content = html_content.replace("/* ALL_ITEM_IDS_PLACEHOLDER */ []", all_item_ids_json)
 
 # Gravar o novo checklist_estudos.html
 target_file = "/home/Hugo/Documentos/iniciando/checklist_estudos.html"
