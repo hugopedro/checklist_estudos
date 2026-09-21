@@ -180,9 +180,9 @@ html_content = f"""<!DOCTYPE html>
         <!-- Ações do Cabeçalho: Status de Salvamento e Botões Compactos -->
         <div class="flex items-center space-x-2 flex-shrink-0">
           <!-- Indicador de Salvamento Automático -->
-          <div class="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200" title="Todas as alterações são salvas continuamente no navegador">
+          <div class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200" title="Todas as alterações são salvas continuamente no navegador">
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Salvo</span>
+            <span id="save-status-text">Salvo</span>
           </div>
 
           <!-- Grupo de Botões Secundários (Tailwind UI Button Group) -->
@@ -352,7 +352,7 @@ for d in disciplines:
     c_in_d = sum(len(g["items"]) for g in d["groups"]) + len(d.get("checklists", []))
     html_content += f"""            <option value="disc_{num}">{num}. {html.escape(short_title)} ({c_in_d} tópicos)</option>\n"""
 
-html_content += """          </select>
+html_content += f"""          </select>
         </div>
 
         <!-- Botões de Expandir / Recolher Tudo -->
@@ -735,6 +735,11 @@ html_content += """      </div>
           const arr = JSON.parse(raw);
           completedItems = new Set(arr);
         }
+        const statusText = document.getElementById('save-status-text');
+        if (statusText && completedItems.size > 0) {
+          const count = completedItems.size;
+          statusText.textContent = `${count} salvo${count > 1 ? 's' : ''}`;
+        }
       } catch (e) {
         console.error("Erro ao ler localStorage:", e);
         completedItems = new Set();
@@ -746,9 +751,15 @@ html_content += """      </div>
       try {
         const arr = Array.from(completedItems);
         localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+        const statusText = document.getElementById('save-status-text');
+        if (statusText) {
+          const count = completedItems.size;
+          statusText.textContent = count > 0 ? `${count} salvo${count > 1 ? 's' : ''}` : 'Salvo';
+        }
         showToast("✓ Progresso salvo!");
       } catch (e) {
         console.error("Erro ao salvar no localStorage:", e);
+        showToast("⚠️ Erro ao salvar no navegador.");
       }
     }
 
@@ -846,7 +857,7 @@ html_content += """      </div>
 
       // 2. Progresso Geral das 10 Disciplinas
       const allDiscRows = document.querySelectorAll('#tab-disciplinas [data-item-id]');
-      const totalDiscCount = allDiscRows.length || {total_disc_items};
+      const totalDiscCount = allDiscRows.length || 669;
       let completedDiscCount = 0;
 
       allDiscRows.forEach(el => {
@@ -1137,13 +1148,15 @@ html_content += """      </div>
     }
 
     // Notificação Toast
+    let toastTimeout = null;
     function showToast(msg) {
       const t = document.getElementById('toast-msg');
       const txt = document.getElementById('toast-text');
       if (txt) txt.textContent = msg;
       if (t) {
+        if (toastTimeout) clearTimeout(toastTimeout);
         t.classList.add('show');
-        setTimeout(() => t.classList.remove('show'), 2200);
+        toastTimeout = setTimeout(() => t.classList.remove('show'), 2000);
       }
     }
 

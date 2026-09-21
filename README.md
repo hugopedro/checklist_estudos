@@ -1,20 +1,26 @@
 # 🎯 Checklist de Estudos & Tronco Comum Antifrágil de TI (2026–2028)
 
+> 🌐 **Acesse o Dashboard Online (GitHub Pages):**  
+> 👉 **[https://hugopedro.github.io/checklist_estudos/](https://hugopedro.github.io/checklist_estudos/)**
+
 Repositório estratégico e ecossistema de preparação de alto rendimento para os concursos públicos de elite na área de **Tecnologia da Informação, Ciência de Dados, Engenharia de Software, Infraestrutura, Segurança da Informação e Governança**, com foco em cargos estatutários de remuneração inicial superior a **R$ 25.000,00 – R$ 40.000,00+**.
 
 ---
 
 ## 🚀 Destaques do Projeto
 
-### 1. Dashboard Interativo de Estudos (`checklist_estudos.html`)
-Aplicação *standalone* (sem dependências externas de servidor), desenvolvida com padrões visuais modernos do **Tailwind UI** (modo claro, limpo e profissional):
+### 1. Dashboard Interativo de Estudos (`index.html` / `checklist_estudos.html`)
+Aplicação *standalone* (sem dependências de servidor ou banco externo), desenvolvida com padrões visuais modernos do **Tailwind UI** (modo claro, limpo e profissional):
 - **698 Itens Atômicos Rastreados**:
   - **669 Tópicos Curriculares** divididos nas 10 disciplinas do Tronco Comum Antifrágil.
   - **23 Metas Mensais** de progressão cronológica rumo ao horizonte 2028.
   - **6 Temas Estratégicos de Provas Discursivas Técnicas**.
-- **Interatividade & Persistência**:
-  - Clique na linha para marcar/desmarcar o tópico com destaque amarelo suave (`.concluida`).
-  - Salvamento automático contínuo via `localStorage` do navegador (seus dados de estudo nunca são perdidos).
+- **💾 Salvamento Automático & Persistência Contínua**:
+  - **Zero perda de dados:** Cada clique em qualquer tópico salva instantaneamente no `localStorage` do seu navegador.
+  - **Feedback visual imediato:** A linha fica destacada em amarelo suave (`.concluida`), o checkbox é marcado, o badge no topo exibe a quantidade de itens salvos e uma notificação *toast* confirma o salvamento.
+  - **Persistência garantida:** Você pode fechar o navegador, reiniciar o computador ou atualizar a página (`F5`), e todo o seu progresso continuará marcado.
+  - **Sincronização entre dispositivos (Backup JSON):** Use o botão **Exportar** para baixar seu progresso em JSON e **Importar** em outro computador ou no celular para sincronizar seus estudos.
+- **Ferramentas de Estudo Ágeis**:
   - Botão de cópia rápida 📋 ao lado de cada tópico (facilita colar comandos de prompt no ChatGPT, criar cards no Anki ou notas no Notion).
   - Barra de progresso geral e por disciplina calculadas em tempo real.
   - Filtros instantâneos: *Todos*, *Pendentes* e *Concluídos*, além de busca textual em tempo real.
