@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senado Federal • Analista Legislativo TI (Análise de Sistemas) • Plano de Estudos</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --tx:#1d2330; --mut:#5d6677; --ln:#e3e6eb;
+    --acc:#2f5fd0; --ok:#1f8a4c; --okbg:#eaf7ef;
+    --comum:#6b4fd8; --analise:#2f5fd0; --suporte:#c0661a;
+    --pA:#c0392b; --pB:#b7791f; --pC:#6b7280;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#12151b; --card:#1b1f27; --tx:#e6e9ef; --mut:#9aa3b2; --ln:#2b313c;
+      --acc:#7aa2ff; --ok:#4cc38a; --okbg:#1a2b22;
+      --comum:#a48bff; --analise:#7aa2ff; --suporte:#f0a35e;
+      --pA:#ff7b6b; --pB:#f2c14e; --pC:#9aa3b2;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--tx);line-height:1.5}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px 16px 80px}
+  h1{font-size:1.55rem;margin:0 0 4px}
+  h2{font-size:1.2rem;margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--ln)}
+  h3{font-size:1.02rem;margin:0}
+  p{margin:6px 0}
+  .sub{color:var(--mut);margin:0 0 16px}
+  .card{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:16px;margin:12px 0}
+  .aviso{border-left:4px solid var(--pB)}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--ln);vertical-align:top}
+  th{color:var(--mut);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .k{font-size:1.6rem;font-weight:700}
+  .muted{color:var(--mut);font-size:.9rem}
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--ln);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  nav.toc a{color:var(--acc);text-decoration:none;font-size:.9rem;padding:4px 10px;border:1px solid var(--ln);border-radius:999px;background:var(--card)}
+  .prog{flex:1;min-width:200px;display:flex;align-items:center;gap:8px;font-size:.9rem}
+  .bar{height:8px;background:var(--ln);border-radius:99px;overflow:hidden;flex:1}
+  .bar i{display:block;height:100%;background:var(--ok);transition:width .2s}
+  .ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+  button,.btn{font:inherit;font-size:.88rem;padding:6px 12px;border-radius:8px;border:1px solid var(--ln);background:var(--card);color:var(--tx);cursor:pointer}
+  button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+  .sec{background:var(--card);border:1px solid var(--ln);border-radius:10px;margin:14px 0;overflow:hidden}
+  .sec header{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--ln);align-items:center}
+  .bloco{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+  .peso{font-size:.85rem;color:var(--mut);margin:2px 0 0}
+  .secprog{min-width:130px;display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-size:.85rem;color:var(--mut)}
+  .secprog .bar{width:120px;flex:none}
+  ul{list-style:none;margin:0;padding:0}
+  li{border-bottom:1px solid var(--ln)}
+  li:last-child{border-bottom:none}
+  li label{display:flex;gap:10px;padding:9px 16px;cursor:pointer;align-items:flex-start}
+  li input{margin-top:4px;width:17px;height:17px;flex:none;accent-color:var(--ok)}
+  li .txt{flex:1;font-size:.94rem}
+  li.feito{background:var(--okbg)}
+  li.feito .txt{color:var(--mut);text-decoration:line-through}
+  .tags{display:flex;gap:4px;flex:none}
+  .tags b{font-size:.7rem;font-weight:700;padding:2px 7px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+  .pA{color:var(--pA)} .pB{color:var(--pB)} .pC{color:var(--pC)}
+  .t-comum{color:var(--comum)} .t-analise{color:var(--analise)} .t-suporte{color:var(--suporte)}
+  .fase{border-left:4px solid var(--acc)}
+  .fase h3{margin-bottom:4px}
+  .fase ul{list-style:disc;padding-left:20px}
+  .fase li{border:none;padding:2px 0;font-size:.93rem}
+  .tema{border-left:4px solid var(--comum)}
+  .tema ul{list-style:disc;padding-left:20px}
+  .tema li{border:none;padding:1px 0;font-size:.92rem}
+  code{font-size:.85em;background:var(--ln);padding:1px 5px;border-radius:4px}
+  a{color:var(--acc)}
+  footer{margin-top:40px;color:var(--mut);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Senado Federal — Analista Legislativo, Informática Legislativa</h1>
+<p class="sub">Plano de estudo para <strong>Análise de Sistemas</strong>, com a parte comum a <strong>Suporte de Sistemas</strong> já incluída. Baseado no edital FGV de 2022. Gerado em 25/11/2026.</p>
+
+<nav class="toc">
+  <a href="#prova">Prova</a><a href="#lista">Checklist</a><a href="#crono">Cronograma</a><a href="#disc">Discursivas</a><a href="#metas">Metas</a>
+  <div class="prog"><span id="pgtxt">0 / 0</span><div class="bar"><i id="pgbar"></i></div></div>
+</nav>
+
+<div class="card aviso">
+  <strong>Nenhuma lista garante aprovação.</strong> Esta cobre tudo o que o edital de 2022 pediu, atualizado para as normas e versões vigentes. A aprovação vem do volume de questões, dos simulados e das discursivas treinadas (veja as <a href="#metas">metas</a>). Quando o novo edital sair, compare o conteúdo programático com esta lista e acrescente o que mudar.
+</div>
+
+<h2 id="prova">Como é a prova (edital 2022)</h2>
+<div class="grid">
+  <div class="card"><div class="muted">Bloco I — Gerais</div><div class="k">40 × 1 pt</div><p class="muted">Português, RLM, Inglês, Constitucional e Administrativo. Mínimo de 20 pontos.</p></div>
+  <div class="card"><div class="muted">Bloco II — Específicos</div><div class="k">30 × 2 pts</div><p class="muted">Conteúdo de TI da subárea. Mínimo de 30 pontos. <strong>É 60% da objetiva.</strong></p></div>
+  <div class="card"><div class="muted">Discursiva</div><div class="k">2 × 40 pts</div><p class="muted">Duas questões de específicos, até 20 linhas cada, manuscritas. Só é corrigida para os mais bem colocados na objetiva.</p></div>
+  <div class="card"><div class="muted">Dia da prova</div><div class="k">4h30</div><p class="muted">Objetiva e discursiva no mesmo turno. Só vale uma inscrição por turno, então escolha uma subárea.</p></div>
+</div>
+<div class="card">
+  <table>
+    <tr><th>Etiqueta</th><th>Significado</th></tr>
+    <tr><td><b class="t-comum">Comum</b></td><td>Cai nas duas subáreas. Estude a fundo.</td></tr>
+    <tr><td><b class="t-analise">Análise</b></td><td>Só de Análise de Sistemas. É o seu foco.</td></tr>
+    <tr><td><b class="t-suporte">Suporte</b></td><td>Só de Suporte. Deixe para o fim; serve de seguro para outros concursos.</td></tr>
+    <tr><td><b class="pA">A</b> / <b class="pB">B</b> / <b class="pC">C</b></td><td>Prioridade. A: cai sempre ou pesa muito. B: cai com frequência. C: cai pouco, estude depois.</td></tr>
+  </table>
+</div>
+
+<h2 id="lista">Checklist</h2>
+<div class="ctrl">
+  <span class="muted">Mostrar:</span>
+  <button data-f="todos" class="on">Todos</button>
+  <button data-f="comum">Comum</button>
+  <button data-f="analise">Análise</button>
+  <button data-f="suporte">Suporte</button>
+  <button id="ocultar">Ocultar concluídos</button>
+  <span style="flex:1"></span>
+  <button id="exp">Exportar progresso</button>
+  <label class="btn">Importar<input id="imp" type="file" accept=".json" hidden></label>
+</div>
+<p class="muted" id="contagem"></p>
+<div id="lista-itens"></div>
+
+<h2 id="crono">Cronograma (dez/2026 → edital)</h2>
+<p class="muted">O relatório prevê o edital do Senado para o 2º semestre de 2027 a 2028. O plano supõe cerca de 20h por semana, com cerca de metade do tempo em específicos desde o início. Se tiver menos horas, estique as fases, mas mantenha a ordem.</p>
+
+<div class="card fase"><h3>Fase 1 — Dez/2026 a Fev/2027: base do Bloco I + Contratações e Governança</h3>
+<ul>
+  <li>Português, Constitucional e Administrativo: teoria e questões FGV.</li>
+  <li>RLM: lógica proposicional, contagem e probabilidade.</li>
+  <li>Inglês: 20 minutos por dia de leitura técnica, até a prova.</li>
+  <li>Específicos: Contratações de TI e Governança de TI (itens 1 e 2 do edital, comuns às duas subáreas).</li>
+</ul></div>
+
+<div class="card fase"><h3>Fase 2 — Mar a Mai/2027: Engenharia de Software</h3>
+<ul>
+  <li>Processos ágeis, requisitos, UML, princípios de projeto, padrões, qualidade, testes e Git.</li>
+  <li>BPMN e processos de negócio.</li>
+  <li>Bloco I em modo manutenção: uma bateria de questões por matéria por semana.</li>
+</ul></div>
+
+<div class="card fase"><h3>Fase 3 — Jun a Ago/2027: Arquitetura, nuvem, DevOps e desenvolvimento</h3>
+<ul>
+  <li>Estilos arquiteturais, microsserviços, web, nuvem, containers, integração e DevOps.</li>
+  <li>Java/Spring, front-end (TypeScript, Angular) e estruturas de dados.</li>
+  <li><strong>Começar as discursivas:</strong> uma por semana, à mão, com tempo marcado.</li>
+</ul></div>
+
+<div class="card fase"><h3>Fase 4 — Set a Out/2027: Dados, Segurança, IA e Direito Digital</h3>
+<ul>
+  <li>Banco de dados, SQL, BI, DAMA, segurança da informação, IA e Direito Digital.</li>
+  <li>Primeiro simulado completo no formato da prova (70 objetivas + 2 discursivas em 4h30).</li>
+</ul></div>
+
+<div class="card fase"><h3>Fase 5 — Nov/2027 até o edital: revisão e simulados</h3>
+<ul>
+  <li>Resolver as provas FGV anteriores do Senado (2022) e da Câmara, TCU e outras de TI da FGV.</li>
+  <li>Simulado completo a cada 15 dias e revisão dos erros.</li>
+  <li>Itens de prioridade C e o bloco de Suporte, se sobrar tempo.</li>
+</ul></div>
+
+<div class="card fase"><h3>Pós-edital (≈ 60 a 90 dias)</h3>
+<ul>
+  <li>No primeiro dia, compare o conteúdo programático novo com esta lista e acrescente o que faltar.</li>
+  <li>Simulado semanal e duas discursivas por semana.</li>
+  <li>Revise as normas citadas no edital pela versão vigente na data dele.</li>
+</ul></div>
+
+<h2 id="disc">Discursivas: temas para treinar</h2>
+<p class="muted">São duas questões de até 20 linhas, valendo 40 pontos cada. Os temas abaixo são os mais prováveis pelo conteúdo do edital, mas são uma estimativa: a banca não divulga os temas antes. Para cada um, escreva uma resposta com definição, características, vantagens e riscos, e um exemplo aplicado ao Senado.</p>
+<div class="grid">
+  <div class="card tema"><h3>1. Contratação e fiscalização de TI</h3><ul><li>ETP, termo de referência, IN SGD/ME 94/2022</li><li>UST × pontos de função × níveis de serviço</li><li>Papel do fiscal e do preposto, glosas</li></ul></div>
+  <div class="card tema"><h3>2. Migração de monólito para microsserviços</h3><ul><li>Strangler fig, API gateway, saga</li><li>Consistência eventual, observabilidade</li><li>Quando não migrar</li></ul></div>
+  <div class="card tema"><h3>3. DevOps e entrega contínua</h3><ul><li>Pipeline de CI/CD, testes automatizados</li><li>Feature flags, deploy canário e blue-green</li><li>DevSecOps</li></ul></div>
+  <div class="card tema"><h3>4. Migração para a nuvem</h3><ul><li>IaaS/PaaS/SaaS, 12 fatores</li><li>Estratégias de migração, vendor lock-in</li><li>Custos, elasticidade, LGPD</li></ul></div>
+  <div class="card tema"><h3>5. Segurança e identidade</h3><ul><li>OAuth2/OIDC, SSO, MFA</li><li>Zero trust, OWASP Top 10</li><li>Proteção de dados em trânsito e em repouso</li></ul></div>
+  <div class="card tema"><h3>6. Governança e qualidade de dados</h3><ul><li>DAMA-DMBOK, metadados, MDM</li><li>LGPD aplicada a sistemas</li><li>Dados abertos e LAI</li></ul></div>
+  <div class="card tema"><h3>7. Gestão ágil de produto</h3><ul><li>Scrum/Kanban, backlog, dívida técnica</li><li>Histórias de usuário, MVP</li><li>Estimativas: pontos de função × story points</li></ul></div>
+  <div class="card tema"><h3>8. IA no setor público</h3><ul><li>LLMs, RAG, chatbots legislativos</li><li>Riscos: viés, alucinação, privacidade</li><li>Governança de IA</li></ul></div>
+</div>
+
+<h2 id="metas">Metas que fazem a diferença</h2>
+<div class="card">
+  <table>
+    <tr><th>Meta</th><th>Alvo</th></tr>
+    <tr><td>Questões resolvidas, de preferência FGV</td><td>150 a 200 por semana, com revisão dos erros</td></tr>
+    <tr><td>Nota nos simulados</td><td>80% ou mais. Os mínimos do edital (20 e 30 pontos) só evitam a eliminação; não aprovam.</td></tr>
+    <tr><td>Específicos</td><td>Prioridade máxima: valem 60% da objetiva e são o conteúdo da discursiva</td></tr>
+    <tr><td>Discursivas</td><td>Uma por semana a partir de jun/2027 e duas por semana depois do edital, à mão e com tempo marcado</td></tr>
+    <tr><td>Inglês</td><td>Leitura técnica diária e todas as provas de inglês da FGV de nível superior</td></tr>
+    <tr><td>Revisão</td><td>Flashcards (Anki) para leis, números de artigos, protocolos e siglas</td></tr>
+    <tr><td>Tempo de prova</td><td>70 objetivas + 2 discursivas em 4h30. Treine para terminar a objetiva em até 3h.</td></tr>
+  </table>
+</div>
+
+<footer>
+  <p><strong>Fonte:</strong> <a href="https://conhecimento.fgv.br/sites/default/files/concursos/senado_analista_edital_retificado_001_25082022.pdf">Edital Senado Federal 2022, retificado (FGV)</a>, itens 4.17, 9.1, 10, 11 e Anexo I. Página do concurso: <a href="https://conhecimento.fgv.br/concursos/senado22/1">conhecimento.fgv.br/concursos/senado22</a>.</p>
+  <p>Atualizações em relação a 2022: as Leis 8.666/1993 e 10.520/2002 foram revogadas pela Lei 14.133/2021; a IN SGD/ME 01/2019 foi substituída pela IN SGD/ME 94/2022; ITIL e COBIT aparecem nas versões atuais (ITIL 4 e COBIT 2019). Confira tudo isso no próximo edital.</p>
+  <p>O progresso fica salvo neste navegador. Use "Exportar progresso" para guardar uma cópia.</p>
+</footer>
+</div>
+
+<script>
+const NOMES = {comum:'Comum', analise:'Análise', suporte:'Suporte'};
+const DATA = [
+ {id:'pt', bloco:'Bloco I — Gerais', nome:'Língua Portuguesa', peso:'Cerca de 8 a 9 questões (9 em 2022). A FGV cobra muito interpretação e reescritura.', itens:[
+  ['comum','A','Interpretação e compreensão: ideia central, ideias explícitas e implícitas, inferências, pressupostos e subentendidos'],
+  ['comum','A','Reescritura de frases e paráfrase com manutenção de sentido e correção'],
+  ['comum','A','Pontuação: vírgula, ponto e vírgula, dois-pontos, travessão e parênteses'],
+  ['comum','A','Coesão e coerência; conectores e seus valores semânticos (concessão, causa, conclusão etc.)'],
+  ['comum','A','Concordância verbal e nominal'],
+  ['comum','A','Regência verbal e nominal; crase'],
+  ['comum','A','Pronomes: colocação pronominal, relativos e demonstrativos'],
+  ['comum','B','Morfologia: classes de palavras, tempos e modos verbais, vozes verbais'],
+  ['comum','B','Sintaxe do período simples e composto: termos da oração, coordenação e subordinação'],
+  ['comum','B','Semântica: sinonímia, antonímia, polissemia, ambiguidade, denotação e conotação'],
+  ['comum','B','Tipos de texto e gêneros textuais; intertextualidade; citações e transcrições'],
+  ['comum','B','Redação Oficial pelo Manual da Presidência (3ª ed.): pronomes de tratamento, fechos, padrão ofício, princípios'],
+  ['comum','C','Fonética e fonologia; acentuação gráfica e ortografia'],
+  ['comum','C','Literatura: texto literário, gêneros literários e principais movimentos literários brasileiros'],
+  ['comum','C','Figuras de linguagem e funções da linguagem']
+ ]},
+ {id:'rlm', bloco:'Bloco I — Gerais', nome:'Raciocínio Lógico-Matemático', peso:'Cerca de 8 questões. Nível básico a médio: não precisa de estatística avançada.', itens:[
+  ['comum','A','Proposições, conectivos e tabelas-verdade; tautologia, contradição e contingência'],
+  ['comum','A','Equivalências e negações (De Morgan, condicional, bicondicional); implicações'],
+  ['comum','A','Quantificadores (todo, algum, nenhum) e suas negações'],
+  ['comum','A','Argumentação: validade, silogismos, diagramas lógicos, inferências e deduções'],
+  ['comum','A','Problemas de lógica: associação, verdades e mentiras, sequências'],
+  ['comum','A','Contagem: princípio fundamental, arranjos, permutações e combinações'],
+  ['comum','A','Probabilidade: básica, condicional, eventos independentes'],
+  ['comum','B','Operações com conjuntos e diagramas de Venn'],
+  ['comum','B','Tabelas, gráficos e diagramas; porcentagem, razão e proporção'],
+  ['comum','B','Problemas aritméticos, figuras geométricas (áreas e perímetros) e matrizes']
+ ]},
+ {id:'ing', bloco:'Bloco I — Gerais', nome:'Língua Inglesa', peso:'Cerca de 8 questões. Leitura de textos, não gramática pura. Não estava no seu checklist antigo.', itens:[
+  ['comum','A','Hábito: 20 minutos por dia de leitura técnica em inglês (documentação, artigos, notícias de tecnologia)'],
+  ['comum','A','Compreensão: ideia principal, ideias secundárias, informações explícitas e implícitas'],
+  ['comum','A','Vocabulário: cognatos, falsos cognatos e phrasal verbs comuns'],
+  ['comum','A','Elementos de referência (it, this, which, they) e conectores (however, therefore, although, whereas, unless)'],
+  ['comum','B','Tempos verbais e verbos modais (can, may, might, must, should) e o sentido que dão ao texto'],
+  ['comum','B','Voz passiva, comparativos e superlativos, prefixos e sufixos'],
+  ['comum','B','Palavras e expressões equivalentes no contexto'],
+  ['comum','A','Resolver todas as provas de inglês da FGV de nível superior que encontrar']
+ ]},
+ {id:'const', bloco:'Bloco I — Gerais', nome:'Direito Constitucional', peso:'Cerca de 8 questões (8 em 2022). No Senado, Poder Legislativo pesa mais.', itens:[
+  ['comum','A','Poder Legislativo: Congresso, Câmara e Senado; competências privativas (arts. 48 a 52); reuniões; comissões e CPIs'],
+  ['comum','A','Estatuto dos congressistas: imunidades, incompatibilidades e perda do mandato (arts. 53 a 56)'],
+  ['comum','A','Processo legislativo (arts. 59 a 69): espécies normativas, PEC, iniciativa, sanção e veto, medidas provisórias, leis complementares e delegadas'],
+  ['comum','A','Fiscalização contábil, financeira e orçamentária; TCU (arts. 70 a 75)'],
+  ['comum','A','Administração Pública (arts. 37 a 41): princípios, servidores, acumulação, estabilidade'],
+  ['comum','A','Direitos e deveres individuais e coletivos (art. 5º) e remédios constitucionais'],
+  ['comum','B','Princípios fundamentais; direitos sociais, nacionalidade, direitos políticos e partidos'],
+  ['comum','B','Constituição de 1988: conceito, características e estrutura; poder constituinte e seus limites'],
+  ['comum','B','Organização do Estado: União, Estados, DF e Municípios; competências; intervenção federal'],
+  ['comum','B','Controle de constitucionalidade: difuso e concentrado (ADI, ADC, ADPF, ADO) e efeitos'],
+  ['comum','B','Poder Executivo: atribuições e responsabilidade do Presidente; Ministros de Estado'],
+  ['comum','B','Poder Judiciário (órgãos, garantias, competências) e funções essenciais à justiça'],
+  ['comum','C','Defesa do Estado e das instituições democráticas: estado de defesa, estado de sítio, Forças Armadas']
+ ]},
+ {id:'adm', bloco:'Bloco I — Gerais', nome:'Direito Administrativo', peso:'Cerca de 8 questões.', itens:[
+  ['comum','A','Lei 14.133/2021: modalidades (inclusive pregão), critérios de julgamento, contratação direta, fases, contratos e sanções'],
+  ['comum','A','Atos administrativos: requisitos, atributos, classificação, extinção, nulidades, revogação e convalidação'],
+  ['comum','A','Poderes administrativos (discricionário, regulamentar, hierárquico, disciplinar, de polícia) e abuso de poder'],
+  ['comum','A','Agentes públicos e Lei 8.112/1990: provimento, investidura, estabilidade, acumulação, regime disciplinar, PAD, seguridade'],
+  ['comum','A','Processo administrativo federal: Lei 9.784/1999'],
+  ['comum','A','LGPD (Lei 13.709/2018): bases legais, direitos do titular, ANPD e tratamento pelo poder público'],
+  ['comum','B','Conceitos e princípios; Estado, governo e Administração; reformas administrativas'],
+  ['comum','B','Organização da Administração: centralização, descentralização, desconcentração; administração indireta; terceiro setor'],
+  ['comum','B','Controle interno e externo da Administração'],
+  ['comum','B','Responsabilidade civil do Estado (art. 37, § 6º)'],
+  ['comum','B','Improbidade administrativa: Lei 8.429/1992 com as mudanças da Lei 14.230/2021'],
+  ['comum','B','Lei de Acesso à Informação (Lei 12.527/2011)'],
+  ['comum','B','LINDB (Decreto-Lei 4.657/1942) e alterações da Lei 13.655/2018 (arts. 20 a 30). Não estava no seu checklist antigo.']
+ ]},
+ {id:'contr', bloco:'Bloco II — Específicos', nome:'1. Contratações de TI', peso:'Item 1 do edital nas duas subáreas. Cai na objetiva e é forte candidato à discursiva.', itens:[
+  ['comum','A','Lei 14.133/2021 aplicada a TI: estudo técnico preliminar, termo de referência, matriz de riscos, pesquisa de preços'],
+  ['comum','A','IN SGD/ME 94/2022 (contratação de soluções de TIC), que substituiu a IN 01/2019 cobrada em 2022: planejamento, seleção do fornecedor e gestão do contrato'],
+  ['comum','B','IN SEGES/ME 65/2021 (pesquisa de preços) e IN SEGES/ME 58/2022 (ETP digital, que substituiu a IN 40/2020)'],
+  ['comum','A','Remuneração por esforço × por resultado; UST, pontos de função e postos de trabalho com níveis de serviço; recomendações e acórdãos do TCU'],
+  ['comum','A','Fiscalização: gestor e fiscais (técnico, administrativo, requisitante), preposto, níveis de serviço e IMR, glosas, registro de irregularidades, sanções'],
+  ['comum','B','Aquisição de soluções: alternativas, construir × comprar, custo-benefício, ROI, TCO, prova de conceito, serviços de sustentação e consultoria']
+ ]},
+ {id:'gov', bloco:'Bloco II — Específicos', nome:'2. Gestão e Governança de TI', peso:'Item 2 do edital nas duas subáreas.', itens:[
+  ['comum','A','Planejamento estratégico: negócio, missão, visão e valores; SWOT, análise de cenários, matriz GUT; ciclo PDCA'],
+  ['comum','A','Balanced Scorecard: perspectivas, mapa estratégico e indicadores'],
+  ['comum','A','ITIL 4: sistema de valor de serviço, cadeia de valor e práticas (incidente, problema, mudança, nível de serviço). Revise também o ciclo de vida da v3, cobrada em 2022.'],
+  ['comum','A','COBIT 2019: princípios, objetivos de governança e de gestão, fatores de desenho. O edital de 2022 pedia COBIT 5.'],
+  ['comum','A','PMBOK: princípios, domínios de desempenho e os grupos de processos clássicos; gestão de projetos, produtos e equipes'],
+  ['comum','A','PETI, PDTI, indicadores de desempenho de TI, acordos de nível de serviço'],
+  ['comum','B','Modelagem de processos e de serviços; gestão de riscos de TI; relacionamento entre TI, negócio e usuários; governança de dados']
+ ]},
+ {id:'proc', bloco:'Bloco II — Específicos', nome:'3. Negócio, processos e transformação digital', peso:'Item 3 do edital de Análise de Sistemas.', itens:[
+  ['analise','A','BPMN 2.0: eventos, atividades, gateways, pools e lanes'],
+  ['analise','B','Modelagem, análise e redesenho de processos; desenvolvimento orientado a processos; workflow; arquitetura corporativa'],
+  ['analise','B','Design thinking, business model canvas, modelagem conceitual'],
+  ['analise','B','Transformação digital, governo eletrônico e cidadania digital; Lei do Governo Digital (Lei 14.129/2021)']
+ ]},
+ {id:'es', bloco:'Bloco II — Específicos', nome:'4. Engenharia de Software', peso:'Itens 5 a 10, 18 e 19 do edital de Análise. É o núcleo da sua subárea.', itens:[
+  ['analise','A','Processos: cascata, Processo Unificado, ágil; Scrum (Guia 2020: papéis, eventos, artefatos), XP, Kanban, Lean'],
+  ['analise','A','Engenharia de requisitos: elicitação, gestão, requisitos funcionais e não funcionais, histórias de usuário (INVEST), casos de uso'],
+  ['analise','B','UX e interface: usabilidade, acessibilidade (WCAG, eMAG), responsividade, prototipação, MVP, testes A/B; privacidade por padrão e por projeto'],
+  ['analise','A','Gestão de produto: backlog, priorização, dívida técnica, trade-offs, estimativas por pontos de função e story points'],
+  ['analise','A','UML 2.5: diagramas estruturais e comportamentais; modelo E-R; orientação a objetos'],
+  ['analise','A','Projeto: acoplamento e coesão, SOLID, padrões de projeto (GoF), código limpo, code smells, refatoração'],
+  ['analise','B','Qualidade: atributos (ISO/IEC 25010), métricas de processo e de código, análise estática e dinâmica'],
+  ['analise','A','Testes: unidade, integração e sistema; planejamento; TDD; princípio FIRST; xUnit; mocks e stubs; testabilidade'],
+  ['analise','A','Git: branches, merge e rebase, Gitflow, monorepo × multirepo, versionamento semântico, revisão de código, gestão de liberação'],
+  ['analise','C','Software livre: licenças, dinâmica de comunidades, developer relations, uso e modificação de software de terceiros'],
+  ['analise','C','Geração de código, engenharia reversa; documentação técnica e de usuário; indicadores de desempenho de processo']
+ ]},
+ {id:'arq', bloco:'Bloco II — Específicos', nome:'5. Arquitetura, nuvem e DevOps', peso:'Itens 11 a 14, 17 e 20 do edital de Análise. Parte é comum com Suporte.', itens:[
+  ['analise','A','Estilos: camadas, cliente-servidor, baseada em serviços, microsserviços, orientada a eventos, hexagonal, serverless; anti-padrões'],
+  ['analise','A','Microsserviços: API gateway, service discovery, circuit breaker, saga, CQRS, consistência eventual'],
+  ['analise','B','Documentação de arquitetura: C4 model, ArchiMate; tomada de decisão técnica'],
+  ['comum','A','Arquitetura web: HTTP, SSL/TLS, proxy, cache, DNS, balanceamento de carga, tolerância a falhas, escalabilidade'],
+  ['comum','A','Nuvem: IaaS, PaaS, SaaS, serverless; modelo dos 12 fatores; estratégias de migração; elasticidade, bilhetagem e cobrança'],
+  ['comum','A','Containers: Docker, OCI, Kubernetes (pods, deployments, services, escalonamento); boas práticas; CDNs'],
+  ['analise','A','Integração: padrões de integração, REST, web services, projeto de APIs, comunicação síncrona e assíncrona, mensageria, JSON, XML, gRPC'],
+  ['comum','A','DevOps: integração e entrega contínuas, feature flags, deploy A/B e canário; observabilidade (logs e métricas)'],
+  ['analise','C','Scripts de automação (shell, Ruby) e operação em ambiente Linux']
+ ]},
+ {id:'dev', bloco:'Bloco II — Específicos', nome:'6. Desenvolvimento', peso:'Item 16 do edital de Análise.', itens:[
+  ['analise','A','Estruturas de dados (listas, pilhas, filas, árvores, hash, grafos), lógica de programação, complexidade de algoritmos (Big-O)'],
+  ['analise','A','Java: orientação a objetos, coleções, exceções, streams e lambdas, JVM, evolução da linguagem'],
+  ['analise','A','Spring, Spring Boot, Spring Cloud, JPA'],
+  ['analise','B','Automação de build: Maven e npm'],
+  ['analise','B','Front-end: HTML, CSS, Bootstrap, JavaScript, TypeScript, Angular'],
+  ['analise','B','Python'],
+  ['analise','C','Aplicativos móveis: arquitetura mobile e Ionic'],
+  ['analise','C','Plone e Liferay (portais e CMS): conceitos']
+ ]},
+ {id:'dados', bloco:'Bloco II — Específicos', nome:'7. Dados', peso:'Itens 15 e 24 do edital de Análise.', itens:[
+  ['comum','A','Modelagem relacional, modelo E-R, normalização (1FN a 3FN e FNBC)'],
+  ['analise','A','SQL (DDL, DML, joins, subconsultas, agregação, funções de janela) e PL/SQL (procedures, functions, triggers)'],
+  ['comum','B','Otimização de consultas, índices, transações e ACID'],
+  ['comum','B','NoSQL (documento, chave-valor, colunar, grafo), teorema CAP, indexação de dados e conteúdo'],
+  ['analise','B','DAMA-DMBOK: arquitetura e qualidade de dados, metadados, MDM, segurança e privacidade de dados'],
+  ['analise','B','Mapeamento objeto-relacional; gestão de configuração de esquemas com Liquibase'],
+  ['analise','B','BI: data warehouse, modelagem dimensional (estrela e floco de neve), OLAP, ETL, data mining, ERP'],
+  ['analise','B','Big data e stream processing'],
+  ['analise','C','ECM, gestão eletrônica e arquivística de documentos, e-ARQ Brasil; ontologias']
+ ]},
+ {id:'seg', bloco:'Bloco II — Específicos', nome:'8. Segurança da Informação', peso:'Item 21 de Análise e item 5 de Suporte.', itens:[
+  ['comum','A','Princípios (confidencialidade, integridade, disponibilidade, autenticidade, não repúdio); principais ataques e vulnerabilidades'],
+  ['analise','A','Desenvolvimento seguro e OWASP Top 10'],
+  ['comum','A','Identidade e acesso: autenticação × autorização, MFA, single sign-on, SAML, OAuth2, OpenID Connect, login social'],
+  ['comum','A','Criptografia simétrica e assimétrica, hash, assinatura e certificação digital, ICP-Brasil, SSL e mTLS; dados em trânsito e em repouso'],
+  ['comum','B','Zero trust, gestão de segredos, mascaramento de dados, DevSecOps, CIS Controls'],
+  ['suporte','B','ISO/IEC 27001, 27002 e 27005; NIST CSF e NIST SP 800-61; MITRE ATT&CK; CyBOK'],
+  ['suporte','B','Firewall, IDS e IPS, SIEM, proxy, PAM, CASB, antivírus e antispam; red team e blue team; continuidade de negócio']
+ ]},
+ {id:'ia', bloco:'Bloco II — Específicos', nome:'9. IA e tecnologias emergentes', peso:'Itens 22 a 24 do edital de Análise. Só conceitos.', itens:[
+  ['analise','A','IA e aprendizado de máquina: supervisionado e não supervisionado, métricas de avaliação, overfitting'],
+  ['analise','B','Deep learning, processamento de linguagem natural, chatbots; LLMs e RAG (tema atual, provável no próximo edital)'],
+  ['analise','C','Blockchain: conceitos e principais aplicações']
+ ]},
+ {id:'dig', bloco:'Bloco II — Específicos', nome:'10. Direito Digital', peso:'Item final das duas subáreas. Não estava completo no seu checklist antigo.', itens:[
+  ['comum','A','LGPD aplicada a sistemas: proteção de dados e direito à privacidade'],
+  ['comum','A','Marco Civil da Internet (Lei 12.965/2014): guarda de registros, responsabilidade de provedores, remoção de conteúdo; julgamento do STF de 2025 sobre o art. 19'],
+  ['comum','B','Lei 12.737/2012 (crimes cibernéticos)'],
+  ['comum','B','Lei 9.609/1998 (propriedade intelectual de programa de computador)'],
+  ['comum','B','Lei 13.188/2015 (direito de resposta)'],
+  ['comum','B','Direito ao esquecimento (STF, Tema 786); redes sociais, direitos de personalidade e notícias falsas; quebra do sigilo telemático']
+ ]},
+ {id:'sup', bloco:'Bloco II — Específicos', nome:'11. Complemento de Suporte de Sistemas', peso:'Só cai em Suporte. Deixe para o fim; serve de seguro para Câmara, TCU, TCDF e CLDF.', itens:[
+  ['suporte','C','Redes: TCP/IP, endereçamento, IPv6, OSPF e BGP, VLAN, Spanning Tree e RSTP, QoS, SNMP, wireless, cabeamento estruturado, voz e vídeo'],
+  ['suporte','C','Sistemas operacionais: Windows Server, Active Directory, Exchange, Microsoft 365, Ubuntu Server, Red Hat'],
+  ['suporte','C','Scripts: Bash, PowerShell e Python'],
+  ['suporte','C','Virtualização (VMware e XCP-NG); storage SAN, NAS e DAS; backup'],
+  ['suporte','C','Alta disponibilidade, clusters, balanceamento, proxy reverso e proxy cache (HAProxy, Nginx); servidores IIS e Tomcat'],
+  ['suporte','C','Infraestrutura como código: Puppet, Ansible, Jenkins; gerenciamento de configuração'],
+  ['suporte','C','Data center: disponibilidade e redundância, norma ANSI/TIA-942'],
+  ['suporte','C','Administração de bancos de dados: Oracle, SQL Server, PostgreSQL e MySQL; desempenho e tolerância a falhas']
+ ]}
+];
+
+const KEY = 'senado-ti-analise-2027-v1';
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e) { state = {}; }
+let filtro = 'todos', ocultar = false;
+const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+
+function render(){
+  const root = document.getElementById('lista-itens');
+  root.innerHTML = '';
+  let tot = 0, ok = 0;
+  const porTag = {comum:[0,0], analise:[0,0], suporte:[0,0]};
+  DATA.forEach(sec => {
+    const itens = sec.itens.map((it,i) => ({tag:it[0], prio:it[1], txt:it[2], id:sec.id+'-'+i}));
+    itens.forEach(x => { porTag[x.tag][0]++; if(state[x.id]) porTag[x.tag][1]++; });
+    const sTot = itens.length, sOk = itens.filter(x => state[x.id]).length;
+    tot += sTot; ok += sOk;
+    const vis = itens.filter(x => (filtro==='todos' || x.tag===filtro) && !(ocultar && state[x.id]));
+    if(!vis.length) return;
+    const el = document.createElement('section');
+    el.className = 'sec';
+    el.innerHTML = `<header><div><span class="bloco">${sec.bloco}</span><h3>${sec.nome}</h3><p class="peso">${sec.peso}</p></div>
+      <div class="secprog"><span>${sOk} / ${sTot}</span><div class="bar"><i style="width:${sTot ? sOk/sTot*100 : 0}%"></i></div></div></header>`;
+    const ul = document.createElement('ul');
+    vis.forEach(x => {
+      const li = document.createElement('li');
+      if(state[x.id]) li.className = 'feito';
+      li.innerHTML = `<label><input type="checkbox" ${state[x.id] ? 'checked' : ''}><span class="txt">${x.txt}</span>
+        <span class="tags"><b class="p${x.prio}">${x.prio}</b><b class="t-${x.tag}">${NOMES[x.tag]}</b></span></label>`;
+      li.querySelector('input').addEventListener('change', e => {
+        if(e.target.checked) state[x.id] = 1; else delete state[x.id];
+        save(); render();
+      });
+      ul.appendChild(li);
+    });
+    el.appendChild(ul);
+    root.appendChild(el);
+  });
+  const pct = tot ? ok/tot*100 : 0;
+  document.getElementById('pgtxt').textContent = `${ok} / ${tot} (${pct.toFixed(1)}%)`;
+  document.getElementById('pgbar').style.width = pct + '%';
+  document.getElementById('contagem').textContent =
+    `Comum: ${porTag.comum[1]}/${porTag.comum[0]} • Análise: ${porTag.analise[1]}/${porTag.analise[0]} • Suporte: ${porTag.suporte[1]}/${porTag.suporte[0]}`;
+}
+
+document.querySelectorAll('button[data-f]').forEach(b => b.addEventListener('click', () => {
+  filtro = b.dataset.f;
+  document.querySelectorAll('button[data-f]').forEach(x => x.classList.toggle('on', x === b));
+  render();
+}));
+document.getElementById('ocultar').addEventListener('click', e => {
+  ocultar = !ocultar; e.target.classList.toggle('on', ocultar); render();
+});
+document.getElementById('exp').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(state, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'progresso_senado_ti.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+document.getElementById('imp').addEventListener('change', e => {
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try { state = JSON.parse(r.result); save(); render(); alert('Progresso importado.'); }
+    catch(err) { alert('Arquivo inválido.'); }
+  };
+  r.readAsText(f);
+  e.target.value = '';
+});
+render();
+</script>
+</body>
+</html>
